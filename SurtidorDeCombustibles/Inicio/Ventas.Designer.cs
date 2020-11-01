@@ -42,18 +42,21 @@
             this.btn7 = new System.Windows.Forms.Button();
             this.btnMonto = new System.Windows.Forms.Button();
             this.btnLitros = new System.Windows.Forms.Button();
-            this.btnPremium = new System.Windows.Forms.Button();
-            this.btnSuper = new System.Windows.Forms.Button();
-            this.btnEuro = new System.Windows.Forms.Button();
-            this.btnDiesel = new System.Windows.Forms.Button();
             this.txtVisorVenta = new System.Windows.Forms.TextBox();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.txtCantidadYMonto = new System.Windows.Forms.TextBox();
             this.ImgSurtAbierto = new System.Windows.Forms.PictureBox();
             this.ImgSurtCerrado = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnPremium = new System.Windows.Forms.RadioButton();
+            this.btnSuper = new System.Windows.Forms.RadioButton();
+            this.btnEuro = new System.Windows.Forms.RadioButton();
+            this.btnDiesel = new System.Windows.Forms.RadioButton();
+            this.Box1 = new System.Windows.Forms.GroupBox();
+            this.lblSuper = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).BeginInit();
+            this.Box1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn1
@@ -131,7 +134,6 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "DEL";
             this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btn0
             // 
@@ -197,7 +199,6 @@
             this.btnMonto.TabIndex = 13;
             this.btnMonto.Text = "$";
             this.btnMonto.UseVisualStyleBackColor = false;
-            this.btnMonto.Click += new System.EventHandler(this.btnMonto_Click);
             // 
             // btnLitros
             // 
@@ -209,58 +210,6 @@
             this.btnLitros.TabIndex = 14;
             this.btnLitros.Text = "LITROS";
             this.btnLitros.UseVisualStyleBackColor = false;
-            // 
-            // btnPremium
-            // 
-            this.btnPremium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnPremium.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPremium.Location = new System.Drawing.Point(586, 97);
-            this.btnPremium.Name = "btnPremium";
-            this.btnPremium.Size = new System.Drawing.Size(76, 46);
-            this.btnPremium.TabIndex = 15;
-            this.btnPremium.Text = "PREMIUM";
-            this.btnPremium.UseVisualStyleBackColor = false;
-            this.btnPremium.Click += new System.EventHandler(this.btnPremium_Click);
-            // 
-            // btnSuper
-            // 
-            this.btnSuper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnSuper.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSuper.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuper.Location = new System.Drawing.Point(586, 149);
-            this.btnSuper.Name = "btnSuper";
-            this.btnSuper.Size = new System.Drawing.Size(76, 46);
-            this.btnSuper.TabIndex = 16;
-            this.btnSuper.Text = "SUPER";
-            this.btnSuper.UseVisualStyleBackColor = false;
-            this.btnSuper.Click += new System.EventHandler(this.btnSuper_Click);
-            // 
-            // btnEuro
-            // 
-            this.btnEuro.BackColor = System.Drawing.Color.Aqua;
-            this.btnEuro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEuro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEuro.Location = new System.Drawing.Point(586, 198);
-            this.btnEuro.Name = "btnEuro";
-            this.btnEuro.Size = new System.Drawing.Size(76, 46);
-            this.btnEuro.TabIndex = 17;
-            this.btnEuro.Text = "EURO";
-            this.btnEuro.UseVisualStyleBackColor = false;
-            this.btnEuro.Click += new System.EventHandler(this.btnEuro_Click);
-            // 
-            // btnDiesel
-            // 
-            this.btnDiesel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnDiesel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDiesel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiesel.Location = new System.Drawing.Point(586, 250);
-            this.btnDiesel.Name = "btnDiesel";
-            this.btnDiesel.Size = new System.Drawing.Size(76, 46);
-            this.btnDiesel.TabIndex = 18;
-            this.btnDiesel.Text = "DIESEL";
-            this.btnDiesel.UseVisualStyleBackColor = false;
-            this.btnDiesel.Click += new System.EventHandler(this.btnDiesel_Click);
             // 
             // txtVisorVenta
             // 
@@ -323,19 +272,93 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnPremium
+            // 
+            this.btnPremium.AutoSize = true;
+            this.btnPremium.BackColor = System.Drawing.Color.Lime;
+            this.btnPremium.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPremium.Location = new System.Drawing.Point(7, 17);
+            this.btnPremium.Name = "btnPremium";
+            this.btnPremium.Size = new System.Drawing.Size(83, 17);
+            this.btnPremium.TabIndex = 24;
+            this.btnPremium.TabStop = true;
+            this.btnPremium.Text = "PREMIUM";
+            this.btnPremium.UseVisualStyleBackColor = false;
+            // 
+            // btnSuper
+            // 
+            this.btnSuper.BackColor = System.Drawing.Color.Tomato;
+            this.btnSuper.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuper.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuper.Location = new System.Drawing.Point(7, 69);
+            this.btnSuper.Name = "btnSuper";
+            this.btnSuper.Size = new System.Drawing.Size(83, 17);
+            this.btnSuper.TabIndex = 25;
+            this.btnSuper.TabStop = true;
+            this.btnSuper.Text = "SUPER";
+            this.btnSuper.UseVisualStyleBackColor = false;
+            // 
+            // btnEuro
+            // 
+            this.btnEuro.BackColor = System.Drawing.Color.Aqua;
+            this.btnEuro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEuro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEuro.Location = new System.Drawing.Point(7, 118);
+            this.btnEuro.Name = "btnEuro";
+            this.btnEuro.Size = new System.Drawing.Size(83, 17);
+            this.btnEuro.TabIndex = 26;
+            this.btnEuro.TabStop = true;
+            this.btnEuro.Text = "EURO";
+            this.btnEuro.UseVisualStyleBackColor = false;
+            // 
+            // btnDiesel
+            // 
+            this.btnDiesel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnDiesel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDiesel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiesel.Location = new System.Drawing.Point(7, 168);
+            this.btnDiesel.Name = "btnDiesel";
+            this.btnDiesel.Size = new System.Drawing.Size(83, 17);
+            this.btnDiesel.TabIndex = 27;
+            this.btnDiesel.TabStop = true;
+            this.btnDiesel.Text = "DIESEL";
+            this.btnDiesel.UseVisualStyleBackColor = false;
+            // 
+            // Box1
+            // 
+            this.Box1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Box1.Controls.Add(this.lblSuper);
+            this.Box1.Controls.Add(this.btnDiesel);
+            this.Box1.Controls.Add(this.btnEuro);
+            this.Box1.Controls.Add(this.btnSuper);
+            this.Box1.Controls.Add(this.btnPremium);
+            this.Box1.Location = new System.Drawing.Point(583, 95);
+            this.Box1.Name = "Box1";
+            this.Box1.Size = new System.Drawing.Size(164, 201);
+            this.Box1.TabIndex = 28;
+            this.Box1.TabStop = false;
+            // 
+            // lblSuper
+            // 
+            this.lblSuper.AutoSize = true;
+            this.lblSuper.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSuper.Location = new System.Drawing.Point(96, 16);
+            this.lblSuper.Name = "lblSuper";
+            this.lblSuper.Size = new System.Drawing.Size(7, 13);
+            this.lblSuper.TabIndex = 29;
+            this.lblSuper.Text = "\r\n";
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 421);
+            this.ClientSize = new System.Drawing.Size(772, 421);
+            this.Controls.Add(this.Box1);
             this.Controls.Add(this.txtCantidadYMonto);
             this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtVisorVenta);
-            this.Controls.Add(this.btnDiesel);
-            this.Controls.Add(this.btnEuro);
-            this.Controls.Add(this.btnSuper);
-            this.Controls.Add(this.btnPremium);
             this.Controls.Add(this.btnLitros);
             this.Controls.Add(this.btnMonto);
             this.Controls.Add(this.btnDelete);
@@ -354,8 +377,11 @@
             this.Controls.Add(this.ImgSurtCerrado);
             this.Name = "Ventas";
             this.Text = "Ventas";
+            this.Load += new System.EventHandler(this.Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).EndInit();
+            this.Box1.ResumeLayout(false);
+            this.Box1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,14 +404,16 @@
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btnMonto;
         private System.Windows.Forms.Button btnLitros;
-        private System.Windows.Forms.Button btnPremium;
-        private System.Windows.Forms.Button btnSuper;
-        private System.Windows.Forms.Button btnEuro;
-        private System.Windows.Forms.Button btnDiesel;
         private System.Windows.Forms.TextBox txtVisorVenta;
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.TextBox txtCantidadYMonto;
         private System.Windows.Forms.PictureBox ImgSurtAbierto;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.RadioButton btnPremium;
+        private System.Windows.Forms.RadioButton btnSuper;
+        private System.Windows.Forms.RadioButton btnEuro;
+        private System.Windows.Forms.RadioButton btnDiesel;
+        private System.Windows.Forms.GroupBox Box1;
+        private System.Windows.Forms.Label lblSuper;
     }
 }

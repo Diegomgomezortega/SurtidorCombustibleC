@@ -17,15 +17,15 @@ namespace Inicio
         {
             InitializeComponent();
         }
-       
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            txtVisorVenta.Text = txtVisorVenta.Text+ btn1.Text;
+    
+private void btn1_Click(object sender, EventArgs e)
+        {txtVisorVenta.Text = txtVisorVenta.Text+ btn1.Text;
+
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            txtVisorVenta.Text = txtVisorVenta.Text+btn2.Text;
+            txtVisorVenta.Text = txtVisorVenta.Text + btn2.Text;
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -63,19 +63,9 @@ namespace Inicio
             txtVisorVenta.Text = txtVisorVenta.Text + btn9.Text;
         }
 
-        private void btnMonto_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn0_Click(object sender, EventArgs e)
         {
             txtVisorVenta.Text = txtVisorVenta.Text + btn0.Text;
-        }
-
-        private void btnPremium_Click(object sender, EventArgs e)
-        {
-            txtProducto.Text = btnPremium.Text;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -83,32 +73,37 @@ namespace Inicio
             this.Hide();
             frmInicio Formulario = new frmInicio();
             Formulario.Show();
-
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            
+            if (btnSuper.Checked)
+
+            {
+                double Precio = 65;
+                txtCantidadYMonto.Text = System.Convert.ToString(System.Convert.ToDouble(txtVisorVenta.Text) / Precio);
+
+
+            }
         }
 
-        private void btnSuper_Click(object sender, EventArgs e)
+        private void Ventas_Load(object sender, EventArgs e)
         {
-            txtProducto.Text = btnSuper.Text;
-        }
-
-        private void btnEuro_Click(object sender, EventArgs e)
-        {
-            txtProducto.Text = btnEuro.Text;
-        }
-
-        private void btnDiesel_Click(object sender, EventArgs e)
-        {
-            txtProducto.Text = btnDiesel.Text;
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            txtVisorVenta.Text = null;
+            lblSuper.Text = 65;
         }
     }
+
+
+
+
+
+
+
+    //private void btnPremium_Click(object sender, EventArgs e)
+    //{
+    //    txtProducto.Text = btnPremium.Text;
+    //}
+
+
+    
 }

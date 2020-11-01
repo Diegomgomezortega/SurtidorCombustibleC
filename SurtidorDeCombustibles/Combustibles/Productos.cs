@@ -13,12 +13,11 @@ namespace Productos
     {
         Combustible[] Liquidos = new Combustible[4];  //0:Premuim-1:Super-2:Euro-3:Diesel
 
-        
-        public string [] Nombre;
-        
-        int Precio = new int();
-        int[] VentaDeProductos = new int[4];
-        private int[] LitrosVendidos = new int[4];
+
+        string[] Nombre = new string[4];
+        double[] Precio = new double[4];
+        double[] VentaDeProductos = new double[4];
+        double[] LitrosVendidos = new double[4];
 
        // LitrosVendidos[0]=90;
        // Precio[0]=65;
