@@ -28,11 +28,11 @@ namespace Inicio
             this.Hide();
 
             Ventas frm = new Ventas();
-            Combustible Liquido = new Combustible();
-            Liquido.Precio[0] = 75;
-            Liquido.Precio[1] = 68;
-            Liquido.Precio[2] = 70;
-            Liquido.Precio[3] = 65;
+            //Combustible Liquido = new Combustible();
+            //Liquido.Precio[0] = 75;
+            //Liquido.Precio[1] = 68;
+            //Liquido.Precio[2] = 70;
+            //Liquido.Precio[3] = 65;
             frm.Show();
             
             

@@ -16,9 +16,15 @@ namespace Inicio
 
     public partial class Ventas : Form
     {
-        
-         
 
+
+        double PrecioSuper= 65;
+        double PrecioPremium = 75;
+        double PrecioDiesel = 60;
+        double PrecioEuro = 70;
+
+        double MontoVenta;
+        double LitrosVenta;
         
 
 
@@ -88,7 +94,7 @@ namespace Inicio
         private void btnOK_Click(object sender, EventArgs e)
 
         {
-            //Combustible Liquido = new Combustible();
+            Combustible Liquido = new Combustible();
             //Liquido.Precio[0] = 75;
             //Liquido.Precio[1] = 68;
             //Liquido.Precio[2] = 70;
@@ -97,10 +103,20 @@ namespace Inicio
 
             if (btnSuper.Checked)
 
-            {
-                int Indice = 1;
-                Liquido.LitrosVendidos[Indice] = System.Convert.ToDouble(txtVisorVenta.Text) / Liquido.Precio[Indice];
-                txtCantidadYMonto.Text = System.Convert.ToString(System.Convert.ToDouble(txtVisorVenta.Text) / Liquido.Precio[Indice]);
+            {   int Indice = 1;
+                //Precio[Indice] = 65;
+                MontoVenta = System.Convert.ToDouble(txtVisorVenta.Text);
+                
+                Liquido.PrecioCombustibles[Indice] = PrecioSuper;
+                LitrosVenta = MontoVenta / Liquido.PrecioCombustibles[Indice];
+                Liquido.LitrosVendidos[Indice] = Liquido.LitrosVendidos[Indice]+LitrosVenta;
+                Liquido.VentaDeProductos[4] = Liquido.VentaDeProductos[4] + MontoVenta;
+
+                txtCantidadYMonto.Text = System.Convert.ToString(LitrosVenta);
+                txtProducto.Text = System.Convert.ToString( Liquido.LitrosVendidos[Indice]);
+               
+                //Liquido.LitrosVendidos[Indice] = System.Convert.ToDouble(txtVisorVenta.Text) / Liquido.Precio[Indice];
+                //txtCantidadYMonto.Text = System.Convert.ToString(System.Convert.ToDouble(txtVisorVenta.Text) / Liquido.Precio[Indice]);
 
 
                 //double[] Precio = new double[4];

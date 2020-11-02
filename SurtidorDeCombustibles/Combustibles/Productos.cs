@@ -14,13 +14,14 @@ namespace Productos
         //public Combustible[] Liquidos = new Combustible[4];  //0:Premuim-1:Super-2:Euro-3:Diesel
 
         public string[] Nombre = new string[4];
-        public double[] Precio = new double[4];
-        
-        public double[] VentaDeProductos = new double[4];
+        public double[] PrecioCombustibles = new double[4];
+        public double[] VentaDeProductos = new double[5];
         public double[] LitrosVendidos = new double[4];
-        
+
     }
+
     
+
 
 
 
