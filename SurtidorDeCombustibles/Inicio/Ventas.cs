@@ -11,8 +11,18 @@ using System.Windows.Forms;
 
 namespace Inicio
 {
+
+
+
     public partial class Ventas : Form
     {
+        
+         
+
+        
+
+
+
         public Ventas()
         {
             InitializeComponent();
@@ -76,25 +86,35 @@ namespace Inicio
         }
 
         private void btnOK_Click(object sender, EventArgs e)
+
         {
+            //Combustible Liquido = new Combustible();
+            //Liquido.Precio[0] = 75;
+            //Liquido.Precio[1] = 68;
+            //Liquido.Precio[2] = 70;
+            //Liquido.Precio[3] = 65;
+
+
             if (btnSuper.Checked)
 
             {
-                int Indice = 0;
+                int Indice = 1;
+                Liquido.LitrosVendidos[Indice] = System.Convert.ToDouble(txtVisorVenta.Text) / Liquido.Precio[Indice];
+                txtCantidadYMonto.Text = System.Convert.ToString(System.Convert.ToDouble(txtVisorVenta.Text) / Liquido.Precio[Indice]);
 
-                txtCantidadYMonto.Text = System.Convert.ToString(System.Convert.ToDouble(txtVisorVenta.Text) / Precio);
-                Combustible Super = new Combustible();
-                Super.
+
                 //double[] Precio = new double[4];
                 //double[] VentaDeProductos = new double[4];
                 //double[] LitrosVendidos = new double[4];
+
+
 
             }
         }
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-            lblSuper.Text = 65;
+           // lblSuper.Text = 65;
         }
     }
 

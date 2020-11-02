@@ -108,6 +108,7 @@
             this.Controls.Add(this.ImgInicio);
             this.Name = "frmInicio";
             this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.frmInicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImgInicio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,16 +11,28 @@ namespace Productos
     public class Combustible
 
     {
-        Combustible[] Liquidos = new Combustible[4];  //0:Premuim-1:Super-2:Euro-3:Diesel
-        {
-          string[] Nombre = new string[4];
-        double[] Precio = new double[4];
-        double[] VentaDeProductos = new double[4];
-        double[] LitrosVendidos = new double[4];
-}
+        //public Combustible[] Liquidos = new Combustible[4];  //0:Premuim-1:Super-2:Euro-3:Diesel
 
-
+        public string[] Nombre = new string[4];
+        public double[] Precio = new double[4];
         
+        public double[] VentaDeProductos = new double[4];
+        public double[] LitrosVendidos = new double[4];
+        
+    }
+    
+
+
+
+
+
+ }
+    
+    
+    
+ 
+       
+       
     
        // LitrosVendidos[0]=90;
        // Precio[0]=65;
@@ -31,8 +43,8 @@ namespace Productos
 
 
 
-    }
+    
 
     
     
-}
+
