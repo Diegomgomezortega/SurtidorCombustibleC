@@ -18,7 +18,7 @@ namespace Inicio
             InitializeComponent();
         }
     
-private void btn1_Click(object sender, EventArgs e)
+        private void btn1_Click(object sender, EventArgs e)
         {txtVisorVenta.Text = txtVisorVenta.Text+ btn1.Text;
 
         }
@@ -80,9 +80,14 @@ private void btn1_Click(object sender, EventArgs e)
             if (btnSuper.Checked)
 
             {
-                double Precio = 65;
-                txtCantidadYMonto.Text = System.Convert.ToString(System.Convert.ToDouble(txtVisorVenta.Text) / Precio);
+                int Indice = 0;
 
+                txtCantidadYMonto.Text = System.Convert.ToString(System.Convert.ToDouble(txtVisorVenta.Text) / Precio);
+                Combustible Super = new Combustible();
+                Super.
+                //double[] Precio = new double[4];
+                //double[] VentaDeProductos = new double[4];
+                //double[] LitrosVendidos = new double[4];
 
             }
         }
@@ -99,10 +104,7 @@ private void btn1_Click(object sender, EventArgs e)
 
 
 
-    //private void btnPremium_Click(object sender, EventArgs e)
-    //{
-    //    txtProducto.Text = btnPremium.Text;
-    //}
+    
 
 
     
