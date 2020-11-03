@@ -8,19 +8,38 @@ using System.Threading.Tasks;
 namespace Productos
 {
 
+
+
     public class Combustible
 
     {
         //public Combustible[] Liquidos = new Combustible[4];  //0:Premuim-1:Super-2:Euro-3:Diesel
 
-        public string[] Nombre = new string[4];
-        public double[] PrecioCombustibles = new double[4];
-        public double[] VentaDeProductos = new double[5];
+
+        public double Precio = new double();
         public double[] LitrosVendidos = new double[4];
+        public int Indice= new int();
+        public double MontodeVenta =new double();
+        public double[] TotaldeVenta = new double[4];
+        public void VentaCombustible()
+        {
+            
+            LitrosVendidos[Indice] = MontodeVenta / Precio;
+            TotaldeVenta[Indice] = TotaldeVenta[Indice] + MontodeVenta;
+
+        }
+       
+
+
+
+
+
+
 
     }
 
     
+
 
 
 

@@ -44,7 +44,7 @@
             this.btnLitros = new System.Windows.Forms.Button();
             this.txtVisorVenta = new System.Windows.Forms.TextBox();
             this.txtProducto = new System.Windows.Forms.TextBox();
-            this.txtCantidadYMonto = new System.Windows.Forms.TextBox();
+            this.txtCantidadLitros = new System.Windows.Forms.TextBox();
             this.ImgSurtAbierto = new System.Windows.Forms.PictureBox();
             this.ImgSurtCerrado = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
@@ -54,6 +54,10 @@
             this.btnDiesel = new System.Windows.Forms.RadioButton();
             this.Box1 = new System.Windows.Forms.GroupBox();
             this.lblSuper = new System.Windows.Forms.Label();
+            this.lblPremium = new System.Windows.Forms.Label();
+            this.lblEuro = new System.Windows.Forms.Label();
+            this.lblDiesel = new System.Windows.Forms.Label();
+            this.txtMonto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).BeginInit();
             this.Box1.SuspendLayout();
@@ -134,6 +138,7 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "DEL";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btn0
             // 
@@ -213,32 +218,37 @@
             // 
             // txtVisorVenta
             // 
-            this.txtVisorVenta.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVisorVenta.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtVisorVenta.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVisorVenta.Location = new System.Drawing.Point(416, 34);
             this.txtVisorVenta.Multiline = true;
             this.txtVisorVenta.Name = "txtVisorVenta";
+            this.txtVisorVenta.ReadOnly = true;
             this.txtVisorVenta.Size = new System.Drawing.Size(150, 43);
             this.txtVisorVenta.TabIndex = 1;
             this.txtVisorVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtProducto
             // 
+            this.txtProducto.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtProducto.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.Location = new System.Drawing.Point(39, 57);
             this.txtProducto.Multiline = true;
             this.txtProducto.Name = "txtProducto";
+            this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(80, 20);
             this.txtProducto.TabIndex = 20;
             this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtCantidadYMonto
+            // txtCantidadLitros
             // 
-            this.txtCantidadYMonto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadYMonto.Location = new System.Drawing.Point(39, 83);
-            this.txtCantidadYMonto.Multiline = true;
-            this.txtCantidadYMonto.Name = "txtCantidadYMonto";
-            this.txtCantidadYMonto.Size = new System.Drawing.Size(80, 46);
-            this.txtCantidadYMonto.TabIndex = 21;
+            this.txtCantidadLitros.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtCantidadLitros.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadLitros.Location = new System.Drawing.Point(39, 117);
+            this.txtCantidadLitros.Name = "txtCantidadLitros";
+            this.txtCantidadLitros.ReadOnly = true;
+            this.txtCantidadLitros.Size = new System.Drawing.Size(80, 26);
+            this.txtCantidadLitros.TabIndex = 21;
             // 
             // ImgSurtAbierto
             // 
@@ -328,6 +338,9 @@
             // Box1
             // 
             this.Box1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Box1.Controls.Add(this.lblDiesel);
+            this.Box1.Controls.Add(this.lblEuro);
+            this.Box1.Controls.Add(this.lblPremium);
             this.Box1.Controls.Add(this.lblSuper);
             this.Box1.Controls.Add(this.btnDiesel);
             this.Box1.Controls.Add(this.btnEuro);
@@ -342,20 +355,78 @@
             // lblSuper
             // 
             this.lblSuper.AutoSize = true;
+            this.lblSuper.BackColor = System.Drawing.Color.White;
+            this.lblSuper.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSuper.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSuper.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSuper.Location = new System.Drawing.Point(96, 16);
+            this.lblSuper.Location = new System.Drawing.Point(96, 69);
+            this.lblSuper.MinimumSize = new System.Drawing.Size(60, 15);
             this.lblSuper.Name = "lblSuper";
-            this.lblSuper.Size = new System.Drawing.Size(7, 13);
+            this.lblSuper.Size = new System.Drawing.Size(60, 24);
             this.lblSuper.TabIndex = 29;
             this.lblSuper.Text = "\r\n";
+            // 
+            // lblPremium
+            // 
+            this.lblPremium.AutoSize = true;
+            this.lblPremium.BackColor = System.Drawing.Color.White;
+            this.lblPremium.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPremium.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPremium.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPremium.Location = new System.Drawing.Point(96, 17);
+            this.lblPremium.MinimumSize = new System.Drawing.Size(60, 15);
+            this.lblPremium.Name = "lblPremium";
+            this.lblPremium.Size = new System.Drawing.Size(60, 24);
+            this.lblPremium.TabIndex = 30;
+            this.lblPremium.Text = "\r\n";
+            // 
+            // lblEuro
+            // 
+            this.lblEuro.AutoSize = true;
+            this.lblEuro.BackColor = System.Drawing.Color.White;
+            this.lblEuro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblEuro.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEuro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEuro.Location = new System.Drawing.Point(96, 118);
+            this.lblEuro.MinimumSize = new System.Drawing.Size(60, 0);
+            this.lblEuro.Name = "lblEuro";
+            this.lblEuro.Size = new System.Drawing.Size(60, 24);
+            this.lblEuro.TabIndex = 31;
+            this.lblEuro.Text = "\r\n";
+            // 
+            // lblDiesel
+            // 
+            this.lblDiesel.AutoSize = true;
+            this.lblDiesel.BackColor = System.Drawing.Color.White;
+            this.lblDiesel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDiesel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiesel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDiesel.Location = new System.Drawing.Point(96, 165);
+            this.lblDiesel.MinimumSize = new System.Drawing.Size(60, 0);
+            this.lblDiesel.Name = "lblDiesel";
+            this.lblDiesel.Size = new System.Drawing.Size(60, 24);
+            this.lblDiesel.TabIndex = 30;
+            this.lblDiesel.Text = "\r\n";
+            // 
+            // txtMonto
+            // 
+            this.txtMonto.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtMonto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Location = new System.Drawing.Point(39, 83);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.ReadOnly = true;
+            this.txtMonto.Size = new System.Drawing.Size(80, 26);
+            this.txtMonto.TabIndex = 29;
+            this.txtMonto.Text = "$";
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 421);
+            this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.Box1);
-            this.Controls.Add(this.txtCantidadYMonto);
+            this.Controls.Add(this.txtCantidadLitros);
             this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtVisorVenta);
@@ -406,7 +477,7 @@
         private System.Windows.Forms.Button btnLitros;
         private System.Windows.Forms.TextBox txtVisorVenta;
         private System.Windows.Forms.TextBox txtProducto;
-        private System.Windows.Forms.TextBox txtCantidadYMonto;
+        private System.Windows.Forms.TextBox txtCantidadLitros;
         private System.Windows.Forms.PictureBox ImgSurtAbierto;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.RadioButton btnPremium;
@@ -415,5 +486,9 @@
         private System.Windows.Forms.RadioButton btnDiesel;
         private System.Windows.Forms.GroupBox Box1;
         private System.Windows.Forms.Label lblSuper;
+        private System.Windows.Forms.Label lblDiesel;
+        private System.Windows.Forms.Label lblEuro;
+        private System.Windows.Forms.Label lblPremium;
+        private System.Windows.Forms.TextBox txtMonto;
     }
 }
