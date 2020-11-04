@@ -1,6 +1,6 @@
 ﻿namespace Inicio
 {
-    partial class MenuConfiguraciones
+    partial class PlayerosTurno
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // MenuConfiguraciones
+            // PlayerosTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 450);
-            this.Name = "MenuConfiguraciones";
-            this.Text = "MenuConfiguraciones";
+            this.ClientSize = new System.Drawing.Size(710, 450);
+            this.Name = "PlayerosTurno";
+            this.Text = "PlayerosTurno";
             this.ResumeLayout(false);
 
         }

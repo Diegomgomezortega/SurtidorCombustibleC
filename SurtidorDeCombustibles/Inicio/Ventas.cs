@@ -18,10 +18,13 @@ namespace Inicio
     {
 
 
-        double PrecioSuper = 65.00;
-        double PrecioPremium = 75.00;
-        double PrecioDiesel = 60.00;
-        double PrecioEuro = 70.00;
+        
+        decimal PrecioSuper = 65.00m;
+        decimal PrecioPremium = 75.00m;
+        decimal PrecioDiesel = 60.00m;
+        decimal PrecioEuro = 70.00m;
+        
+        
 
 
 
@@ -33,10 +36,10 @@ namespace Inicio
         public Ventas()
         {
             InitializeComponent();
-            lblSuper.Text = System.Convert.ToString(PrecioSuper)+".00";
-            lblDiesel.Text = System.Convert.ToString(PrecioDiesel) + ".00";
-            lblEuro.Text = System.Convert.ToString(PrecioEuro) + ".00";
-            lblPremium.Text = System.Convert.ToString(PrecioPremium) + ".00";
+            lblSuper.Text = System.Convert.ToString(PrecioSuper);
+            lblDiesel.Text = System.Convert.ToString(PrecioDiesel);
+            lblEuro.Text = System.Convert.ToString(PrecioEuro);
+            lblPremium.Text = System.Convert.ToString(PrecioPremium);
             btnPremium.Checked = true;
         }
     
@@ -111,61 +114,62 @@ namespace Inicio
 
             {
                 Combustible Liquido = new Combustible();
-
+                
                 Liquido.Indice = 1;
-                Liquido.Precio = PrecioSuper;
-                Liquido.MontodeVenta = System.Convert.ToDouble(txtVisorVenta.Text);
+                Liquido.Nombre[Liquido.Indice] = "Super";
+                Liquido.PrecioCombustible[Liquido.Indice] = PrecioSuper;
+                Liquido.MontodeVenta = System.Convert.ToDecimal(txtVisorVenta.Text);
 
                 Liquido.VentaCombustible();
-                txtProducto.Text = btnSuper.Text;
+                txtProducto.Text = Liquido.Nombre[Liquido.Indice];
                 txtCantidadLitros.Text = System.Convert.ToString(Liquido.LitrosVendidos[Liquido.Indice]);
             }
-            if (btnPremium.Checked)
+            //if (btnPremium.Checked)
 
-            {
-                Combustible Liquido = new Combustible();
+            //{
+            //    Combustible Liquido = new Combustible();
 
-                Liquido.Indice = 0;
-                Liquido.Precio = PrecioPremium;
-                Liquido.MontodeVenta = System.Convert.ToDouble(txtVisorVenta.Text);
-                int ini=0;
-                Liquido.VentaCombustible();
-                txtProducto.Text = btnPremium.Text;
-                for (ini=0; ini ==System.Convert.ToInt32(txtVisorVenta.Text);ini++);
-                {
-                    txtMonto.Text = System.Convert.ToString(ini);
-                    this.Refresh();
-                }
-                //txtCantidadLitros.Text = System.Convert.ToString(Liquido.LitrosVendidos[Liquido.Indice]);
-            }
+            //    Liquido.Indice = 0;
+            //    Liquido.Precio = PrecioPremium;
+            //    Liquido.MontodeVenta = System.Convert.ToDouble(txtVisorVenta.Text);
+            //    int ini=0;
+            //    Liquido.VentaCombustible();
+            //    txtProducto.Text = btnPremium.Text;
+            //    for (ini=0; ini ==System.Convert.ToInt32(txtVisorVenta.Text);ini++);
+            //    {
+            //        txtMonto.Text = System.Convert.ToString(ini);
+            //        this.Refresh();
+            //    }
+            //    //txtCantidadLitros.Text = System.Convert.ToString(Liquido.LitrosVendidos[Liquido.Indice]);
+            //}
 
-            if (btnDiesel.Checked)
+            //if (btnDiesel.Checked)
 
-            {
-                Combustible Liquido = new Combustible();
+            //{
+            //    Combustible Liquido = new Combustible();
 
-                Liquido.Indice = 2;
-                Liquido.Precio = PrecioDiesel;
-                Liquido.MontodeVenta = System.Convert.ToDouble(txtVisorVenta.Text);
+            //    Liquido.Indice = 2;
+            //    Liquido.Precio = PrecioDiesel;
+            //    Liquido.MontodeVenta = System.Convert.ToDouble(txtVisorVenta.Text);
 
-                Liquido.VentaCombustible();
-                txtProducto.Text = btnDiesel.Text;
-                txtCantidadLitros.Text = System.Convert.ToString(Liquido.LitrosVendidos[Liquido.Indice]);
-            }
+            //    Liquido.VentaCombustible();
+            //    txtProducto.Text = btnDiesel.Text;
+            //    txtCantidadLitros.Text = System.Convert.ToString(Liquido.LitrosVendidos[Liquido.Indice]);
+            //}
 
-            if (btnEuro.Checked)
+            //if (btnEuro.Checked)
 
-            {
-                Combustible Liquido = new Combustible();
+            //{
+            //    Combustible Liquido = new Combustible();
 
-                Liquido.Indice = 3;
-                Liquido.Precio = PrecioEuro;
-                Liquido.MontodeVenta = System.Convert.ToDouble(txtVisorVenta.Text);
+            //    Liquido.Indice = 3;
+            //    Liquido.Precio = PrecioEuro;
+            //    Liquido.MontodeVenta = System.Convert.ToDouble(txtVisorVenta.Text);
 
-                Liquido.VentaCombustible();
-                txtProducto.Text = btnEuro.Text;
-                txtCantidadLitros.Text = System.Convert.ToString(Liquido.LitrosVendidos[Liquido.Indice]);
-            }
+            //    Liquido.VentaCombustible();
+            //    txtProducto.Text = btnEuro.Text;
+            //    txtCantidadLitros.Text = System.Convert.ToString(Liquido.LitrosVendidos[Liquido.Indice]);
+            //}
 
             txtMonto.Text = "$" + txtVisorVenta.Text;
             txtVisorVenta.Text = "";

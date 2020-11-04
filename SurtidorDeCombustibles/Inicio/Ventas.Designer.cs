@@ -53,11 +53,12 @@
             this.btnEuro = new System.Windows.Forms.RadioButton();
             this.btnDiesel = new System.Windows.Forms.RadioButton();
             this.Box1 = new System.Windows.Forms.GroupBox();
-            this.lblSuper = new System.Windows.Forms.Label();
-            this.lblPremium = new System.Windows.Forms.Label();
-            this.lblEuro = new System.Windows.Forms.Label();
             this.lblDiesel = new System.Windows.Forms.Label();
+            this.lblEuro = new System.Windows.Forms.Label();
+            this.lblPremium = new System.Windows.Forms.Label();
+            this.lblSuper = new System.Windows.Forms.Label();
             this.txtMonto = new System.Windows.Forms.TextBox();
+            this.btnMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).BeginInit();
             this.Box1.SuspendLayout();
@@ -352,33 +353,19 @@
             this.Box1.TabIndex = 28;
             this.Box1.TabStop = false;
             // 
-            // lblSuper
+            // lblDiesel
             // 
-            this.lblSuper.AutoSize = true;
-            this.lblSuper.BackColor = System.Drawing.Color.White;
-            this.lblSuper.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblSuper.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSuper.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSuper.Location = new System.Drawing.Point(96, 69);
-            this.lblSuper.MinimumSize = new System.Drawing.Size(60, 15);
-            this.lblSuper.Name = "lblSuper";
-            this.lblSuper.Size = new System.Drawing.Size(60, 24);
-            this.lblSuper.TabIndex = 29;
-            this.lblSuper.Text = "\r\n";
-            // 
-            // lblPremium
-            // 
-            this.lblPremium.AutoSize = true;
-            this.lblPremium.BackColor = System.Drawing.Color.White;
-            this.lblPremium.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPremium.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPremium.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPremium.Location = new System.Drawing.Point(96, 17);
-            this.lblPremium.MinimumSize = new System.Drawing.Size(60, 15);
-            this.lblPremium.Name = "lblPremium";
-            this.lblPremium.Size = new System.Drawing.Size(60, 24);
-            this.lblPremium.TabIndex = 30;
-            this.lblPremium.Text = "\r\n";
+            this.lblDiesel.AutoSize = true;
+            this.lblDiesel.BackColor = System.Drawing.Color.White;
+            this.lblDiesel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDiesel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiesel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDiesel.Location = new System.Drawing.Point(96, 165);
+            this.lblDiesel.MinimumSize = new System.Drawing.Size(60, 0);
+            this.lblDiesel.Name = "lblDiesel";
+            this.lblDiesel.Size = new System.Drawing.Size(60, 24);
+            this.lblDiesel.TabIndex = 30;
+            this.lblDiesel.Text = "\r\n";
             // 
             // lblEuro
             // 
@@ -394,19 +381,33 @@
             this.lblEuro.TabIndex = 31;
             this.lblEuro.Text = "\r\n";
             // 
-            // lblDiesel
+            // lblPremium
             // 
-            this.lblDiesel.AutoSize = true;
-            this.lblDiesel.BackColor = System.Drawing.Color.White;
-            this.lblDiesel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDiesel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiesel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDiesel.Location = new System.Drawing.Point(96, 165);
-            this.lblDiesel.MinimumSize = new System.Drawing.Size(60, 0);
-            this.lblDiesel.Name = "lblDiesel";
-            this.lblDiesel.Size = new System.Drawing.Size(60, 24);
-            this.lblDiesel.TabIndex = 30;
-            this.lblDiesel.Text = "\r\n";
+            this.lblPremium.AutoSize = true;
+            this.lblPremium.BackColor = System.Drawing.Color.White;
+            this.lblPremium.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPremium.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPremium.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPremium.Location = new System.Drawing.Point(96, 17);
+            this.lblPremium.MinimumSize = new System.Drawing.Size(60, 15);
+            this.lblPremium.Name = "lblPremium";
+            this.lblPremium.Size = new System.Drawing.Size(60, 24);
+            this.lblPremium.TabIndex = 30;
+            this.lblPremium.Text = "\r\n";
+            // 
+            // lblSuper
+            // 
+            this.lblSuper.AutoSize = true;
+            this.lblSuper.BackColor = System.Drawing.Color.White;
+            this.lblSuper.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSuper.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuper.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSuper.Location = new System.Drawing.Point(96, 69);
+            this.lblSuper.MinimumSize = new System.Drawing.Size(60, 15);
+            this.lblSuper.Name = "lblSuper";
+            this.lblSuper.Size = new System.Drawing.Size(60, 24);
+            this.lblSuper.TabIndex = 29;
+            this.lblSuper.Text = "\r\n";
             // 
             // txtMonto
             // 
@@ -419,11 +420,22 @@
             this.txtMonto.TabIndex = 29;
             this.txtMonto.Text = "$";
             // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.Gray;
+            this.btnMenu.Location = new System.Drawing.Point(675, 327);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(72, 46);
+            this.btnMenu.TabIndex = 30;
+            this.btnMenu.Text = "MENU";
+            this.btnMenu.UseVisualStyleBackColor = false;
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 421);
+            this.ClientSize = new System.Drawing.Size(881, 421);
+            this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.Box1);
             this.Controls.Add(this.txtCantidadLitros);
@@ -490,5 +502,6 @@
         private System.Windows.Forms.Label lblEuro;
         private System.Windows.Forms.Label lblPremium;
         private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.Button btnMenu;
     }
 }
