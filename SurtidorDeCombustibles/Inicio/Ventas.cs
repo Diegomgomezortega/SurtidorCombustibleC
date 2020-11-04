@@ -128,10 +128,15 @@ namespace Inicio
                 Liquido.Indice = 0;
                 Liquido.Precio = PrecioPremium;
                 Liquido.MontodeVenta = System.Convert.ToDouble(txtVisorVenta.Text);
-
+                int ini=0;
                 Liquido.VentaCombustible();
                 txtProducto.Text = btnPremium.Text;
-                txtCantidadLitros.Text = System.Convert.ToString(Liquido.LitrosVendidos[Liquido.Indice]);
+                for (ini=0; ini ==System.Convert.ToInt32(txtVisorVenta.Text);ini++);
+                {
+                    txtMonto.Text = System.Convert.ToString(ini);
+                    this.Refresh();
+                }
+                //txtCantidadLitros.Text = System.Convert.ToString(Liquido.LitrosVendidos[Liquido.Indice]);
             }
 
             if (btnDiesel.Checked)
@@ -164,6 +169,7 @@ namespace Inicio
 
             txtMonto.Text = "$" + txtVisorVenta.Text;
             txtVisorVenta.Text = "";
+
 
 
 
