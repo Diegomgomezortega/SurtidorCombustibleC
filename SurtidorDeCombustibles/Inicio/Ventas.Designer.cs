@@ -58,10 +58,16 @@
             this.lblPremium = new System.Windows.Forms.Label();
             this.lblSuper = new System.Windows.Forms.Label();
             this.txtMonto = new System.Windows.Forms.TextBox();
-            this.btnMenu = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.totalDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventaAnteriorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarPrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).BeginInit();
             this.Box1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn1
@@ -133,7 +139,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.Location = new System.Drawing.Point(503, 327);
+            this.btnDelete.Location = new System.Drawing.Point(572, 327);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(72, 46);
             this.btnDelete.TabIndex = 12;
@@ -233,7 +239,7 @@
             // 
             this.txtProducto.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtProducto.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(39, 57);
+            this.txtProducto.Location = new System.Drawing.Point(39, 78);
             this.txtProducto.Multiline = true;
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
@@ -245,7 +251,7 @@
             // 
             this.txtCantidadLitros.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCantidadLitros.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadLitros.Location = new System.Drawing.Point(39, 117);
+            this.txtCantidadLitros.Location = new System.Drawing.Point(39, 136);
             this.txtCantidadLitros.Name = "txtCantidadLitros";
             this.txtCantidadLitros.ReadOnly = true;
             this.txtCantidadLitros.Size = new System.Drawing.Size(80, 26);
@@ -254,7 +260,7 @@
             // ImgSurtAbierto
             // 
             this.ImgSurtAbierto.Image = global::Inicio.Properties.Resources.SurtETWAbierto;
-            this.ImgSurtAbierto.Location = new System.Drawing.Point(1, 2);
+            this.ImgSurtAbierto.Location = new System.Drawing.Point(1, 34);
             this.ImgSurtAbierto.Name = "ImgSurtAbierto";
             this.ImgSurtAbierto.Size = new System.Drawing.Size(380, 420);
             this.ImgSurtAbierto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -265,7 +271,7 @@
             // ImgSurtCerrado
             // 
             this.ImgSurtCerrado.Image = global::Inicio.Properties.Resources.SurtETW2;
-            this.ImgSurtCerrado.Location = new System.Drawing.Point(1, 2);
+            this.ImgSurtCerrado.Location = new System.Drawing.Point(1, 34);
             this.ImgSurtCerrado.Name = "ImgSurtCerrado";
             this.ImgSurtCerrado.Size = new System.Drawing.Size(380, 420);
             this.ImgSurtCerrado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -275,7 +281,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnBack.Location = new System.Drawing.Point(590, 327);
+            this.btnBack.Location = new System.Drawing.Point(650, 327);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(72, 46);
             this.btnBack.TabIndex = 23;
@@ -413,29 +419,67 @@
             // 
             this.txtMonto.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtMonto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.Location = new System.Drawing.Point(39, 83);
+            this.txtMonto.Location = new System.Drawing.Point(39, 104);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.ReadOnly = true;
             this.txtMonto.Size = new System.Drawing.Size(80, 26);
             this.txtMonto.TabIndex = 29;
             this.txtMonto.Text = "$";
             // 
-            // btnMenu
+            // button1
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.Gray;
-            this.btnMenu.Location = new System.Drawing.Point(675, 327);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(72, 46);
-            this.btnMenu.TabIndex = 30;
-            this.btnMenu.Text = "MENU";
-            this.btnMenu.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.Location = new System.Drawing.Point(494, 327);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 46);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "LlENAR";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.totalDeVentasToolStripMenuItem,
+            this.ventaAnteriorToolStripMenuItem,
+            this.cerrarTurnoToolStripMenuItem,
+            this.modificarPrecioToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1167, 24);
+            this.menuStrip1.TabIndex = 32;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // totalDeVentasToolStripMenuItem
+            // 
+            this.totalDeVentasToolStripMenuItem.Name = "totalDeVentasToolStripMenuItem";
+            this.totalDeVentasToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.totalDeVentasToolStripMenuItem.Text = "Total de Ventas";
+            this.totalDeVentasToolStripMenuItem.Click += new System.EventHandler(this.totalDeVentasToolStripMenuItem_Click);
+            // 
+            // ventaAnteriorToolStripMenuItem
+            // 
+            this.ventaAnteriorToolStripMenuItem.Name = "ventaAnteriorToolStripMenuItem";
+            this.ventaAnteriorToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.ventaAnteriorToolStripMenuItem.Text = "Venta Anterior";
+            // 
+            // cerrarTurnoToolStripMenuItem
+            // 
+            this.cerrarTurnoToolStripMenuItem.Name = "cerrarTurnoToolStripMenuItem";
+            this.cerrarTurnoToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.cerrarTurnoToolStripMenuItem.Text = "Cerrar Turno";
+            // 
+            // modificarPrecioToolStripMenuItem
+            // 
+            this.modificarPrecioToolStripMenuItem.Name = "modificarPrecioToolStripMenuItem";
+            this.modificarPrecioToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.modificarPrecioToolStripMenuItem.Text = "Modificar Precio";
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 421);
-            this.Controls.Add(this.btnMenu);
+            this.ClientSize = new System.Drawing.Size(1167, 421);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.Box1);
             this.Controls.Add(this.txtCantidadLitros);
@@ -458,13 +502,16 @@
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.ImgSurtAbierto);
             this.Controls.Add(this.ImgSurtCerrado);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "Ventas";
             this.Text = "Ventas";
-            this.Load += new System.EventHandler(this.Ventas_Load);
+            //this.Load += new System.EventHandler(this.Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).EndInit();
             this.Box1.ResumeLayout(false);
             this.Box1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,6 +549,11 @@
         private System.Windows.Forms.Label lblEuro;
         private System.Windows.Forms.Label lblPremium;
         private System.Windows.Forms.TextBox txtMonto;
-        private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem totalDeVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventaAnteriorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarTurnoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarPrecioToolStripMenuItem;
     }
 }

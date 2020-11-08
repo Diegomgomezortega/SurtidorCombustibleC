@@ -48,9 +48,9 @@ namespace Inicio
 
         private void btnConfiguraciones_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MenuConfiguraciones fmr = new MenuConfiguraciones();
-            fmr.Show();
+            //this.Hide();
+            //Historial fmr = new Historial();
+            //fmr.Show();
         }
     }
 }

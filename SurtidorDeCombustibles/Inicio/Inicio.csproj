@@ -52,17 +52,11 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuConfiguraciones.cs">
+    <Compile Include="fmrTotalVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuConfiguraciones.Designer.cs">
-      <DependentUpon>MenuConfiguraciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PlayerosTurno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PlayerosTurno.Designer.cs">
-      <DependentUpon>PlayerosTurno.cs</DependentUpon>
+    <Compile Include="fmrTotalVentas.Designer.cs">
+      <DependentUpon>fmrTotalVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,11 +69,8 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuConfiguraciones.resx">
-      <DependentUpon>MenuConfiguraciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PlayerosTurno.resx">
-      <DependentUpon>PlayerosTurno.cs</DependentUpon>
+    <EmbeddedResource Include="fmrTotalVentas.resx">
+      <DependentUpon>fmrTotalVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,6 +85,7 @@
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Ventas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
