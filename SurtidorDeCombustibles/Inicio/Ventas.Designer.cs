@@ -78,10 +78,12 @@
             this.txtLitrosSuper = new System.Windows.Forms.TextBox();
             this.txtMontoPremium = new System.Windows.Forms.TextBox();
             this.txtLitrosPremium = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).BeginInit();
             this.Box1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn1
@@ -468,7 +470,6 @@
             this.totalDeVentasToolStripMenuItem.Name = "totalDeVentasToolStripMenuItem";
             this.totalDeVentasToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.totalDeVentasToolStripMenuItem.Text = "Total de Ventas";
-            //this.totalDeVentasToolStripMenuItem.Click += new System.EventHandler(this.totalDeVentasToolStripMenuItem_Click);
             // 
             // ventaAnteriorToolStripMenuItem
             // 
@@ -601,11 +602,20 @@
             this.txtLitrosPremium.Size = new System.Drawing.Size(89, 20);
             this.txtLitrosPremium.TabIndex = 33;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(847, 250);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 47;
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1167, 421);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtMontoTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label1);
@@ -652,6 +662,7 @@
             this.Box1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -709,5 +720,6 @@
         private System.Windows.Forms.TextBox txtLitrosSuper;
         private System.Windows.Forms.TextBox txtMontoPremium;
         private System.Windows.Forms.TextBox txtLitrosPremium;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

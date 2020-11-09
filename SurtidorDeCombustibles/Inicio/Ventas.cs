@@ -28,6 +28,9 @@ namespace Inicio
         public decimal LitrosVendidosPremium = 0;
         public decimal LitrosVendidosEuro = 0;
         public decimal LitrosVendidosDiesel = 0;
+        
+        
+        
 
 
 
@@ -40,6 +43,7 @@ namespace Inicio
             lblEuro.Text = System.Convert.ToString(PrecioEuro);
             lblPremium.Text = System.Convert.ToString(PrecioPremium);
             btnPremium.Checked = true;
+            DataTable tabladeventas = new DataTable();
 
 
         }
@@ -111,6 +115,18 @@ namespace Inicio
         public void btnOK_Click(object sender, EventArgs e)
 
         {
+            DataTable tabladeventas = new DataTable();
+            tabladeventas.TableName = "TOTAL DE VENTAS";
+            tabladeventas.Columns.Add("PRODUCTO", typeof(string));
+            tabladeventas.Columns.Add("LITROS", typeof(decimal));
+            tabladeventas.Columns.Add("MONTO", typeof(decimal));
+            tabladeventas.Rows.Add(btnPremium.Text);
+            tabladeventas.Rows.Add(btnSuper.Text);
+            tabladeventas.Rows.Add(btnEuro.Text);
+            tabladeventas.Rows.Add(btnDiesel.Text);
+
+
+            dataGridView1.DataSource = tabladeventas;
             string[] NombreLiquidos = new string[4];
             NombreLiquidos[1] = "Super";
             NombreLiquidos[0] = "Premium";
@@ -129,6 +145,7 @@ namespace Inicio
                 txtCantidadLitros.Text = System.Convert.ToString(LitrosVendidosSuper);
                 txtMonto.Text = "$" + txtVisorVenta.Text;
                 txtVisorVenta.Text = "";
+                tabladeventas.Rows[0]["LITROS"] = LitrosVendidosSuper;
                 //MetodoVenta();
             }
 
@@ -190,7 +207,8 @@ namespace Inicio
             txtLitrosSuper.Text = System.Convert.ToString(LitrosVendidosSuper);
             txtLitrosPremium.Text = System.Convert.ToString(LitrosVendidosPremium);
 
-
+            tabladeventas.Rows.Add();
+            dataGridView1.DataSource = tabladeventas;
 
         }
 
