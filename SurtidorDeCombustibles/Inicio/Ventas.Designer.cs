@@ -64,6 +64,20 @@
             this.ventaAnteriorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarPrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtMontoTotal = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMontoDiesel = new System.Windows.Forms.TextBox();
+            this.txtLitrosDiesel = new System.Windows.Forms.TextBox();
+            this.txtMontoEuro = new System.Windows.Forms.TextBox();
+            this.txtLitrosEuro = new System.Windows.Forms.TextBox();
+            this.txtMontoSuper = new System.Windows.Forms.TextBox();
+            this.txtLitrosSuper = new System.Windows.Forms.TextBox();
+            this.txtMontoPremium = new System.Windows.Forms.TextBox();
+            this.txtLitrosPremium = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).BeginInit();
             this.Box1.SuspendLayout();
@@ -454,7 +468,7 @@
             this.totalDeVentasToolStripMenuItem.Name = "totalDeVentasToolStripMenuItem";
             this.totalDeVentasToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.totalDeVentasToolStripMenuItem.Text = "Total de Ventas";
-            this.totalDeVentasToolStripMenuItem.Click += new System.EventHandler(this.totalDeVentasToolStripMenuItem_Click);
+            //this.totalDeVentasToolStripMenuItem.Click += new System.EventHandler(this.totalDeVentasToolStripMenuItem_Click);
             // 
             // ventaAnteriorToolStripMenuItem
             // 
@@ -474,11 +488,138 @@
             this.modificarPrecioToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.modificarPrecioToolStripMenuItem.Text = "Modificar Precio";
             // 
+            // txtMontoTotal
+            // 
+            this.txtMontoTotal.Location = new System.Drawing.Point(984, 206);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(89, 20);
+            this.txtMontoTotal.TabIndex = 46;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblTotal.Location = new System.Drawing.Point(816, 206);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(31, 13);
+            this.lblTotal.TabIndex = 45;
+            this.lblTotal.Text = "Total";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Aqua;
+            this.label1.Location = new System.Drawing.Point(816, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Euro";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Tomato;
+            this.label2.Location = new System.Drawing.Point(816, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Super";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Lime;
+            this.label3.Location = new System.Drawing.Point(816, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Premium";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label4.Location = new System.Drawing.Point(816, 182);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Diesel";
+            // 
+            // txtMontoDiesel
+            // 
+            this.txtMontoDiesel.Location = new System.Drawing.Point(984, 175);
+            this.txtMontoDiesel.Name = "txtMontoDiesel";
+            this.txtMontoDiesel.Size = new System.Drawing.Size(89, 20);
+            this.txtMontoDiesel.TabIndex = 40;
+            // 
+            // txtLitrosDiesel
+            // 
+            this.txtLitrosDiesel.Location = new System.Drawing.Point(889, 175);
+            this.txtLitrosDiesel.Name = "txtLitrosDiesel";
+            this.txtLitrosDiesel.Size = new System.Drawing.Size(89, 20);
+            this.txtLitrosDiesel.TabIndex = 39;
+            // 
+            // txtMontoEuro
+            // 
+            this.txtMontoEuro.Location = new System.Drawing.Point(984, 149);
+            this.txtMontoEuro.Name = "txtMontoEuro";
+            this.txtMontoEuro.Size = new System.Drawing.Size(89, 20);
+            this.txtMontoEuro.TabIndex = 38;
+            // 
+            // txtLitrosEuro
+            // 
+            this.txtLitrosEuro.Location = new System.Drawing.Point(889, 149);
+            this.txtLitrosEuro.Name = "txtLitrosEuro";
+            this.txtLitrosEuro.Size = new System.Drawing.Size(89, 20);
+            this.txtLitrosEuro.TabIndex = 37;
+            // 
+            // txtMontoSuper
+            // 
+            this.txtMontoSuper.Location = new System.Drawing.Point(984, 123);
+            this.txtMontoSuper.Name = "txtMontoSuper";
+            this.txtMontoSuper.Size = new System.Drawing.Size(89, 20);
+            this.txtMontoSuper.TabIndex = 36;
+            // 
+            // txtLitrosSuper
+            // 
+            this.txtLitrosSuper.Location = new System.Drawing.Point(889, 123);
+            this.txtLitrosSuper.Name = "txtLitrosSuper";
+            this.txtLitrosSuper.Size = new System.Drawing.Size(89, 20);
+            this.txtLitrosSuper.TabIndex = 35;
+            // 
+            // txtMontoPremium
+            // 
+            this.txtMontoPremium.Location = new System.Drawing.Point(984, 97);
+            this.txtMontoPremium.Name = "txtMontoPremium";
+            this.txtMontoPremium.Size = new System.Drawing.Size(89, 20);
+            this.txtMontoPremium.TabIndex = 34;
+            // 
+            // txtLitrosPremium
+            // 
+            this.txtLitrosPremium.Location = new System.Drawing.Point(889, 97);
+            this.txtLitrosPremium.Name = "txtLitrosPremium";
+            this.txtLitrosPremium.Size = new System.Drawing.Size(89, 20);
+            this.txtLitrosPremium.TabIndex = 33;
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1167, 421);
+            this.Controls.Add(this.txtMontoTotal);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtMontoDiesel);
+            this.Controls.Add(this.txtLitrosDiesel);
+            this.Controls.Add(this.txtMontoEuro);
+            this.Controls.Add(this.txtLitrosEuro);
+            this.Controls.Add(this.txtMontoSuper);
+            this.Controls.Add(this.txtLitrosSuper);
+            this.Controls.Add(this.txtMontoPremium);
+            this.Controls.Add(this.txtLitrosPremium);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.Box1);
@@ -505,7 +646,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "Ventas";
             this.Text = "Ventas";
-            //this.Load += new System.EventHandler(this.Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).EndInit();
             this.Box1.ResumeLayout(false);
@@ -555,5 +695,19 @@
         private System.Windows.Forms.ToolStripMenuItem ventaAnteriorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarTurnoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarPrecioToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtMontoTotal;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtMontoDiesel;
+        private System.Windows.Forms.TextBox txtLitrosDiesel;
+        private System.Windows.Forms.TextBox txtMontoEuro;
+        private System.Windows.Forms.TextBox txtLitrosEuro;
+        private System.Windows.Forms.TextBox txtMontoSuper;
+        private System.Windows.Forms.TextBox txtLitrosSuper;
+        private System.Windows.Forms.TextBox txtMontoPremium;
+        private System.Windows.Forms.TextBox txtLitrosPremium;
     }
 }
