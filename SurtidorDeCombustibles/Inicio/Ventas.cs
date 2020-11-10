@@ -126,18 +126,6 @@ namespace Inicio
 
         {
             
-            
-            //tabladeventas.Rows.Add(btnPremium.Text);
-            //tabladeventas.Rows.Add(btnSuper.Text);
-            //tabladeventas.Rows.Add(btnEuro.Text);
-            //tabladeventas.Rows.Add(btnDiesel.Text);
-            //dataGridView1.DataSource = tabladeventas;
-            
-
-
-
-
-
             if (btnSuper.Checked)
 
             {
@@ -189,8 +177,7 @@ namespace Inicio
 
         private void CargaDatosTabla()
         {
-            //txtLitrosSuper.Text = System.Convert.ToString(LitrosVendidos[indice]);
-            //Monto = System.Convert.ToDecimal(txtVisorVenta.Text);
+            
             tabladeventas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
             MontoVendido[indice] = MontoVendido[indice] + Monto;
             tabladeventas.Rows[indice]["TOTAL $"] = MontoVendido[indice];
@@ -209,9 +196,7 @@ namespace Inicio
             return LitrosVendidos[indice];
             
         }
-            
-
-        
+              
         private void btnDelete_Click(object sender, EventArgs e)
         {
             txtVisorVenta.Text = "";
