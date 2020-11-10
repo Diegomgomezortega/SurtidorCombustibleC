@@ -24,9 +24,10 @@ namespace Inicio
         decimal PrecioDiesel = 60.00m;
         decimal PrecioEuro = 70.00m;
         public decimal[] LitrosVendidos = new decimal[4];//0=Premium;1=Super;2=Euro;3=Diesel
+        public decimal[] MontoVendido = new decimal[4];//0=Premium;1=Super;2=Euro;3=Diesel
         int indice = new int();
         decimal litros = 0;
-        
+        decimal Monto = 0;
 
 
 
@@ -45,7 +46,7 @@ namespace Inicio
             tabladeventas.TableName = "TOTAL DE VENTAS";
             tabladeventas.Columns.Add("PRODUCTO", typeof(string));
             tabladeventas.Columns.Add("LITROS", typeof(decimal));
-            tabladeventas.Columns.Add("MONTO", typeof(decimal));
+            tabladeventas.Columns.Add("TOTAL $", typeof(decimal));
             tabladeventas.Rows.Add(btnPremium.Text);
             tabladeventas.Rows.Add(btnSuper.Text);
             tabladeventas.Rows.Add(btnEuro.Text);
@@ -143,14 +144,13 @@ namespace Inicio
                 txtProducto.Text = btnSuper.Text;
                 Liquido.Precio = PrecioSuper;
                 indice = 1;
+                Monto = System.Convert.ToDecimal(txtVisorVenta.Text);
 
                 Venta();
-                txtLitrosSuper.Text = System.Convert.ToString(LitrosVendidos[indice]);
+                CargaDatosTabla();
 
-                tabladeventas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
-                
             }
-          
+
 
             if (btnPremium.Checked)
 
@@ -159,8 +159,7 @@ namespace Inicio
                 Liquido.Precio = PrecioPremium;
                 indice = 0;
                 Venta();
-                txtLitrosPremium.Text = System.Convert.ToString(LitrosVendidos[indice]);
-                tabladeventas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
+                CargaDatosTabla();
             }
 
             if (btnDiesel.Checked)
@@ -169,8 +168,7 @@ namespace Inicio
                 Liquido.Precio = PrecioDiesel;
                 indice = 3;
                 Venta();
-                txtLitrosDiesel.Text = System.Convert.ToString(LitrosVendidos[indice]);
-                tabladeventas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
+                CargaDatosTabla();
             }
 
             if (btnEuro.Checked)
@@ -180,11 +178,18 @@ namespace Inicio
                 indice = 2;
 
                 Venta();
-                txtLitrosEuro.Text = System.Convert.ToString(LitrosVendidos[indice]);
-                tabladeventas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
+                CargaDatosTabla();
             }
 
 
+        }
+
+        private void CargaDatosTabla()
+        {
+            txtLitrosSuper.Text = System.Convert.ToString(LitrosVendidos[indice]);
+            tabladeventas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
+            MontoVendido[indice] = MontoVendido[indice] + Monto;
+            tabladeventas.Rows[indice]["TOTAL $"] = MontoVendido[indice];
         }
 
         private decimal Venta()
