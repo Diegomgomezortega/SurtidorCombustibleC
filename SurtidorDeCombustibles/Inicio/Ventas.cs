@@ -23,7 +23,7 @@ namespace Inicio
         decimal PrecioPremium = 75.00m;
         decimal PrecioDiesel = 60.00m;
         decimal PrecioEuro = 70.00m;
-        public decimal[] LitrosVendidos = new decimal[4];//0=Premium;1=Super;2=Euro;3=Diesel
+        public decimal[] LitrosVendidos = new decimal[4];//mmmm0=Premium;1=Super;2=Euro;3=Diesel
         public decimal[] MontoVendido = new decimal[4];//0=Premium;1=Super;2=Euro;3=Diesel
         int indice = new int();
         decimal litros = 0;
@@ -158,6 +158,7 @@ namespace Inicio
                 txtProducto.Text = btnPremium.Text;
                 Liquido.Precio = PrecioPremium;
                 indice = 0;
+                Monto = System.Convert.ToDecimal(txtVisorVenta.Text);
                 Venta();
                 CargaDatosTabla();
             }
@@ -167,6 +168,7 @@ namespace Inicio
                 txtProducto.Text = btnDiesel.Text;
                 Liquido.Precio = PrecioDiesel;
                 indice = 3;
+                Monto = System.Convert.ToDecimal(txtVisorVenta.Text);
                 Venta();
                 CargaDatosTabla();
             }
@@ -176,6 +178,7 @@ namespace Inicio
                 txtProducto.Text = btnEuro.Text;
                 Liquido.Precio = PrecioSuper;
                 indice = 2;
+                Monto = System.Convert.ToDecimal(txtVisorVenta.Text);
 
                 Venta();
                 CargaDatosTabla();
@@ -186,7 +189,8 @@ namespace Inicio
 
         private void CargaDatosTabla()
         {
-            txtLitrosSuper.Text = System.Convert.ToString(LitrosVendidos[indice]);
+            //txtLitrosSuper.Text = System.Convert.ToString(LitrosVendidos[indice]);
+            //Monto = System.Convert.ToDecimal(txtVisorVenta.Text);
             tabladeventas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
             MontoVendido[indice] = MontoVendido[indice] + Monto;
             tabladeventas.Rows[indice]["TOTAL $"] = MontoVendido[indice];
@@ -194,6 +198,7 @@ namespace Inicio
 
         private decimal Venta()
         {
+            
             Liquido.MontodeVenta = System.Convert.ToDecimal(txtVisorVenta.Text);
             litros = Liquido.LitrosVenta(litros);
 
