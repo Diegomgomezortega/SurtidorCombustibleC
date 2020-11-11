@@ -38,14 +38,14 @@
             this.dgvTurnoAnterior.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTurnoAnterior.Location = new System.Drawing.Point(12, 3);
             this.dgvTurnoAnterior.Name = "dgvTurnoAnterior";
-            this.dgvTurnoAnterior.Size = new System.Drawing.Size(406, 196);
+            this.dgvTurnoAnterior.Size = new System.Drawing.Size(365, 196);
             this.dgvTurnoAnterior.TabIndex = 0;
             // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(351, 229);
+            this.btnVolver.Location = new System.Drawing.Point(311, 226);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(66, 39);
             this.btnVolver.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 450);
+            this.ClientSize = new System.Drawing.Size(384, 290);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dgvTurnoAnterior);
             this.Name = "VentaTurnoAnterior";

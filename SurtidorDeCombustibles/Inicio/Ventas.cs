@@ -138,11 +138,12 @@ namespace Inicio
 
         
         
-        public void btnOK_Click(object sender, EventArgs e)
+        public void btnOK_Click(object sender, EventArgs e)//En este Boton se realizan los eventos de la venta
 
         {
-            try
+            try//Evita que el usuario no coloque el monto antes de vender
             {
+                //Se realiza una accion de acuerdo a qué producto esta seleccionado
                 if (btnSuper.Checked)
 
                 {
@@ -201,7 +202,7 @@ namespace Inicio
 
         }//Dentro de este botón, se realiza la carga y cálculos de las diferentes variables
 
-        private void CargaDatosTabla()
+        private void CargaDatosTabla()//se carga en la tabla los datos de la venta
         {
             
             tabladeventas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
@@ -247,7 +248,7 @@ namespace Inicio
             GuardarVentas = true;
             MessageBox.Show("Se ha guardado el turno");
             this.Hide();
-            Ventas frm = new Ventas();
+            frmInicio frm = new frmInicio();
 
             frm.Show();
         }
