@@ -12,7 +12,8 @@ namespace Inicio
 {
     public partial class VentaTurnoAnterior : Form
     {
-        public VentaTurnoAnterior()
+        
+        public VentaTurnoAnterior()//Dentro del formulario se carga la ultima version guardada
         {
             InitializeComponent();
             DataTable dtUltimoTurno = new DataTable();
@@ -23,9 +24,10 @@ namespace Inicio
             
             dtUltimoTurno.ReadXml("@Turno");
             dgvTurnoAnterior.DataSource = dtUltimoTurno;
+            
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void btnVolver_Click(object sender, EventArgs e)//Vuelve al formulario Ventas
         {
             this.Close();
         }

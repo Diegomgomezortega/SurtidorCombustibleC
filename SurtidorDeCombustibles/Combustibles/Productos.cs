@@ -21,7 +21,7 @@ namespace Productos
 
         
         
-        public decimal LitrosVenta(decimal res)
+        public decimal LitrosVenta(decimal res)//Metodo para calcular los litros vendidos, devuelve Res
         {
             res= MontodeVenta / Precio;
             TotaldeVenta = TotaldeVenta + MontodeVenta;

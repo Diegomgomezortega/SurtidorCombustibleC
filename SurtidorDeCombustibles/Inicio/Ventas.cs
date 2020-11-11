@@ -227,7 +227,7 @@ namespace Inicio
         private void btnDelete_Click(object sender, EventArgs e)
         {
             txtVisorVenta.Text = "";
-        }
+        }//Borra el contenido del Visor de ventas
 
         private void totalDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -259,8 +259,6 @@ namespace Inicio
                 frm.Show();
             }
              
-
-            
         }
 
         private void cargarTotalVentasToolStripMenuItem_Click(object sender, EventArgs e)
