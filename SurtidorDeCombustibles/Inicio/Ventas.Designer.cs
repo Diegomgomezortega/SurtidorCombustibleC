@@ -59,9 +59,9 @@
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.totalDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GuardarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verUltimoTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cerrarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarTotalVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).BeginInit();
             this.Box1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -417,8 +417,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.totalDeVentasToolStripMenuItem,
-            this.cerrarVentasToolStripMenuItem,
-            this.cargarTotalVentasToolStripMenuItem});
+            this.GuardarVentasToolStripMenuItem,
+            this.verUltimoTurnoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(590, 24);
@@ -432,6 +432,20 @@
             this.totalDeVentasToolStripMenuItem.Text = "Total de Ventas";
             this.totalDeVentasToolStripMenuItem.Click += new System.EventHandler(this.totalDeVentasToolStripMenuItem_Click);
             // 
+            // GuardarVentasToolStripMenuItem
+            // 
+            this.GuardarVentasToolStripMenuItem.Name = "GuardarVentasToolStripMenuItem";
+            this.GuardarVentasToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.GuardarVentasToolStripMenuItem.Text = "Guardar Ventas";
+            this.GuardarVentasToolStripMenuItem.Click += new System.EventHandler(this.cerrarVentasToolStripMenuItem_Click);
+            // 
+            // verUltimoTurnoToolStripMenuItem
+            // 
+            this.verUltimoTurnoToolStripMenuItem.Name = "verUltimoTurnoToolStripMenuItem";
+            this.verUltimoTurnoToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.verUltimoTurnoToolStripMenuItem.Text = "Ver Turno Anterior";
+            this.verUltimoTurnoToolStripMenuItem.Click += new System.EventHandler(this.verUltimoTurnoToolStripMenuItem_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -439,20 +453,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(369, 150);
             this.dataGridView1.TabIndex = 47;
-            // 
-            // cerrarVentasToolStripMenuItem
-            // 
-            this.cerrarVentasToolStripMenuItem.Name = "cerrarVentasToolStripMenuItem";
-            this.cerrarVentasToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
-            this.cerrarVentasToolStripMenuItem.Text = "Guardar Ventas";
-            this.cerrarVentasToolStripMenuItem.Click += new System.EventHandler(this.cerrarVentasToolStripMenuItem_Click);
-            // 
-            // cargarTotalVentasToolStripMenuItem
-            // 
-            this.cargarTotalVentasToolStripMenuItem.Name = "cargarTotalVentasToolStripMenuItem";
-            this.cargarTotalVentasToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
-            this.cargarTotalVentasToolStripMenuItem.Text = "Cargar Total Ventas";
-            this.cargarTotalVentasToolStripMenuItem.Click += new System.EventHandler(this.cargarTotalVentasToolStripMenuItem_Click);
             // 
             // Ventas
             // 
@@ -529,7 +529,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem totalDeVentasToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStripMenuItem cerrarVentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cargarTotalVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GuardarVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verUltimoTurnoToolStripMenuItem;
     }
 }
