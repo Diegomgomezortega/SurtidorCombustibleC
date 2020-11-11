@@ -443,8 +443,8 @@
             // cerrarVentasToolStripMenuItem
             // 
             this.cerrarVentasToolStripMenuItem.Name = "cerrarVentasToolStripMenuItem";
-            this.cerrarVentasToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.cerrarVentasToolStripMenuItem.Text = "Cerrar Ventas";
+            this.cerrarVentasToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.cerrarVentasToolStripMenuItem.Text = "Guardar Ventas";
             this.cerrarVentasToolStripMenuItem.Click += new System.EventHandler(this.cerrarVentasToolStripMenuItem_Click);
             // 
             // cargarTotalVentasToolStripMenuItem

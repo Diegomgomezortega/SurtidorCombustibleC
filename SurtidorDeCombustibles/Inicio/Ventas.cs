@@ -221,12 +221,14 @@ namespace Inicio
         {
             tabladeventas.WriteXml("@Turno");
             dataGridView1.DataSource = tabladeventas;
+            MessageBox.Show("Las ventas se han acumulado al total");
         }
 
         private void cargarTotalVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabladeventas.ReadXml("@Turno");
-            //dataGridView1.DataSource = tabladeventas;
+            dataGridView1.DataSource = tabladeventas;
+            MessageBox.Show("Ya es visible el total de Ventas");
         }
     }
 }
