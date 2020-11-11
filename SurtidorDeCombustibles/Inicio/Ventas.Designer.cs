@@ -45,7 +45,6 @@
             this.txtVisorVenta = new System.Windows.Forms.TextBox();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.txtCantidadLitros = new System.Windows.Forms.TextBox();
-            this.ImgSurtAbierto = new System.Windows.Forms.PictureBox();
             this.ImgSurtCerrado = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnPremium = new System.Windows.Forms.RadioButton();
@@ -58,28 +57,11 @@
             this.lblPremium = new System.Windows.Forms.Label();
             this.lblSuper = new System.Windows.Forms.Label();
             this.txtMonto = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.totalDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventaAnteriorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarPrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtMontoTotal = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMontoDiesel = new System.Windows.Forms.TextBox();
-            this.txtLitrosDiesel = new System.Windows.Forms.TextBox();
-            this.txtMontoEuro = new System.Windows.Forms.TextBox();
-            this.txtLitrosEuro = new System.Windows.Forms.TextBox();
-            this.txtMontoSuper = new System.Windows.Forms.TextBox();
-            this.txtLitrosSuper = new System.Windows.Forms.TextBox();
-            this.txtMontoPremium = new System.Windows.Forms.TextBox();
-            this.txtLitrosPremium = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).BeginInit();
+            this.cerrarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarTotalVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).BeginInit();
             this.Box1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -89,7 +71,7 @@
             // btn1
             // 
             this.btn1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn1.Location = new System.Drawing.Point(416, 97);
+            this.btn1.Location = new System.Drawing.Point(231, 83);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(46, 46);
             this.btn1.TabIndex = 1;
@@ -100,7 +82,7 @@
             // btn2
             // 
             this.btn2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn2.Location = new System.Drawing.Point(468, 97);
+            this.btn2.Location = new System.Drawing.Point(283, 83);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(46, 46);
             this.btn2.TabIndex = 2;
@@ -111,7 +93,7 @@
             // btn3
             // 
             this.btn3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn3.Location = new System.Drawing.Point(520, 97);
+            this.btn3.Location = new System.Drawing.Point(335, 83);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(46, 46);
             this.btn3.TabIndex = 3;
@@ -122,7 +104,7 @@
             // btn6
             // 
             this.btn6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn6.Location = new System.Drawing.Point(520, 149);
+            this.btn6.Location = new System.Drawing.Point(335, 135);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(46, 46);
             this.btn6.TabIndex = 6;
@@ -133,7 +115,7 @@
             // btn5
             // 
             this.btn5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn5.Location = new System.Drawing.Point(468, 149);
+            this.btn5.Location = new System.Drawing.Point(283, 135);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(46, 46);
             this.btn5.TabIndex = 5;
@@ -144,7 +126,7 @@
             // btn4
             // 
             this.btn4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn4.Location = new System.Drawing.Point(416, 149);
+            this.btn4.Location = new System.Drawing.Point(231, 135);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(46, 46);
             this.btn4.TabIndex = 4;
@@ -155,7 +137,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.Location = new System.Drawing.Point(572, 327);
+            this.btnDelete.Location = new System.Drawing.Point(309, 288);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(72, 46);
             this.btnDelete.TabIndex = 12;
@@ -166,7 +148,7 @@
             // btn0
             // 
             this.btn0.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn0.Location = new System.Drawing.Point(468, 250);
+            this.btn0.Location = new System.Drawing.Point(283, 236);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(46, 46);
             this.btn0.TabIndex = 11;
@@ -177,7 +159,7 @@
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnOK.Location = new System.Drawing.Point(416, 327);
+            this.btnOK.Location = new System.Drawing.Point(231, 288);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(72, 46);
             this.btnOK.TabIndex = 10;
@@ -188,7 +170,7 @@
             // btn9
             // 
             this.btn9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn9.Location = new System.Drawing.Point(520, 198);
+            this.btn9.Location = new System.Drawing.Point(335, 184);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(46, 46);
             this.btn9.TabIndex = 9;
@@ -199,7 +181,7 @@
             // btn8
             // 
             this.btn8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn8.Location = new System.Drawing.Point(468, 198);
+            this.btn8.Location = new System.Drawing.Point(283, 184);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(46, 46);
             this.btn8.TabIndex = 8;
@@ -210,7 +192,7 @@
             // btn7
             // 
             this.btn7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn7.Location = new System.Drawing.Point(416, 198);
+            this.btn7.Location = new System.Drawing.Point(231, 184);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(46, 46);
             this.btn7.TabIndex = 7;
@@ -221,7 +203,7 @@
             // btnMonto
             // 
             this.btnMonto.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMonto.Location = new System.Drawing.Point(416, 250);
+            this.btnMonto.Location = new System.Drawing.Point(231, 236);
             this.btnMonto.Name = "btnMonto";
             this.btnMonto.Size = new System.Drawing.Size(46, 46);
             this.btnMonto.TabIndex = 13;
@@ -232,7 +214,7 @@
             // 
             this.btnLitros.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLitros.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLitros.Location = new System.Drawing.Point(520, 250);
+            this.btnLitros.Location = new System.Drawing.Point(335, 236);
             this.btnLitros.Name = "btnLitros";
             this.btnLitros.Size = new System.Drawing.Size(46, 46);
             this.btnLitros.TabIndex = 14;
@@ -243,7 +225,7 @@
             // 
             this.txtVisorVenta.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtVisorVenta.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVisorVenta.Location = new System.Drawing.Point(416, 34);
+            this.txtVisorVenta.Location = new System.Drawing.Point(231, 34);
             this.txtVisorVenta.Multiline = true;
             this.txtVisorVenta.Name = "txtVisorVenta";
             this.txtVisorVenta.ReadOnly = true;
@@ -273,17 +255,6 @@
             this.txtCantidadLitros.Size = new System.Drawing.Size(80, 26);
             this.txtCantidadLitros.TabIndex = 21;
             // 
-            // ImgSurtAbierto
-            // 
-            this.ImgSurtAbierto.Image = global::Inicio.Properties.Resources.SurtETWAbierto;
-            this.ImgSurtAbierto.Location = new System.Drawing.Point(1, 34);
-            this.ImgSurtAbierto.Name = "ImgSurtAbierto";
-            this.ImgSurtAbierto.Size = new System.Drawing.Size(380, 420);
-            this.ImgSurtAbierto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ImgSurtAbierto.TabIndex = 22;
-            this.ImgSurtAbierto.TabStop = false;
-            this.ImgSurtAbierto.Visible = false;
-            // 
             // ImgSurtCerrado
             // 
             this.ImgSurtCerrado.Image = global::Inicio.Properties.Resources.SurtETW2;
@@ -297,7 +268,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnBack.Location = new System.Drawing.Point(650, 327);
+            this.btnBack.Location = new System.Drawing.Point(498, 290);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(72, 46);
             this.btnBack.TabIndex = 23;
@@ -369,7 +340,7 @@
             this.Box1.Controls.Add(this.btnEuro);
             this.Box1.Controls.Add(this.btnSuper);
             this.Box1.Controls.Add(this.btnPremium);
-            this.Box1.Location = new System.Drawing.Point(583, 95);
+            this.Box1.Location = new System.Drawing.Point(402, 83);
             this.Box1.Name = "Box1";
             this.Box1.Size = new System.Drawing.Size(164, 201);
             this.Box1.TabIndex = 28;
@@ -442,26 +413,15 @@
             this.txtMonto.TabIndex = 29;
             this.txtMonto.Text = "$";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(494, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 46);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "LlENAR";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.totalDeVentasToolStripMenuItem,
-            this.ventaAnteriorToolStripMenuItem,
-            this.cerrarTurnoToolStripMenuItem,
-            this.modificarPrecioToolStripMenuItem});
+            this.cerrarVentasToolStripMenuItem,
+            this.cargarTotalVentasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1167, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(590, 24);
             this.menuStrip1.TabIndex = 32;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -470,167 +430,36 @@
             this.totalDeVentasToolStripMenuItem.Name = "totalDeVentasToolStripMenuItem";
             this.totalDeVentasToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.totalDeVentasToolStripMenuItem.Text = "Total de Ventas";
-            // 
-            // ventaAnteriorToolStripMenuItem
-            // 
-            this.ventaAnteriorToolStripMenuItem.Name = "ventaAnteriorToolStripMenuItem";
-            this.ventaAnteriorToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.ventaAnteriorToolStripMenuItem.Text = "Venta Anterior";
-            // 
-            // cerrarTurnoToolStripMenuItem
-            // 
-            this.cerrarTurnoToolStripMenuItem.Name = "cerrarTurnoToolStripMenuItem";
-            this.cerrarTurnoToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.cerrarTurnoToolStripMenuItem.Text = "Cerrar Turno";
-            // 
-            // modificarPrecioToolStripMenuItem
-            // 
-            this.modificarPrecioToolStripMenuItem.Name = "modificarPrecioToolStripMenuItem";
-            this.modificarPrecioToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.modificarPrecioToolStripMenuItem.Text = "Modificar Precio";
-            // 
-            // txtMontoTotal
-            // 
-            this.txtMontoTotal.Location = new System.Drawing.Point(984, 206);
-            this.txtMontoTotal.Name = "txtMontoTotal";
-            this.txtMontoTotal.Size = new System.Drawing.Size(89, 20);
-            this.txtMontoTotal.TabIndex = 46;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblTotal.Location = new System.Drawing.Point(816, 206);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(31, 13);
-            this.lblTotal.TabIndex = 45;
-            this.lblTotal.Text = "Total";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Aqua;
-            this.label1.Location = new System.Drawing.Point(816, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Euro";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Tomato;
-            this.label2.Location = new System.Drawing.Point(816, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Super";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(816, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Premium";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(816, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "Diesel";
-            // 
-            // txtMontoDiesel
-            // 
-            this.txtMontoDiesel.Location = new System.Drawing.Point(984, 175);
-            this.txtMontoDiesel.Name = "txtMontoDiesel";
-            this.txtMontoDiesel.Size = new System.Drawing.Size(89, 20);
-            this.txtMontoDiesel.TabIndex = 40;
-            // 
-            // txtLitrosDiesel
-            // 
-            this.txtLitrosDiesel.Location = new System.Drawing.Point(889, 175);
-            this.txtLitrosDiesel.Name = "txtLitrosDiesel";
-            this.txtLitrosDiesel.Size = new System.Drawing.Size(89, 20);
-            this.txtLitrosDiesel.TabIndex = 39;
-            // 
-            // txtMontoEuro
-            // 
-            this.txtMontoEuro.Location = new System.Drawing.Point(984, 149);
-            this.txtMontoEuro.Name = "txtMontoEuro";
-            this.txtMontoEuro.Size = new System.Drawing.Size(89, 20);
-            this.txtMontoEuro.TabIndex = 38;
-            // 
-            // txtLitrosEuro
-            // 
-            this.txtLitrosEuro.Location = new System.Drawing.Point(889, 149);
-            this.txtLitrosEuro.Name = "txtLitrosEuro";
-            this.txtLitrosEuro.Size = new System.Drawing.Size(89, 20);
-            this.txtLitrosEuro.TabIndex = 37;
-            // 
-            // txtMontoSuper
-            // 
-            this.txtMontoSuper.Location = new System.Drawing.Point(984, 123);
-            this.txtMontoSuper.Name = "txtMontoSuper";
-            this.txtMontoSuper.Size = new System.Drawing.Size(89, 20);
-            this.txtMontoSuper.TabIndex = 36;
-            // 
-            // txtLitrosSuper
-            // 
-            this.txtLitrosSuper.Location = new System.Drawing.Point(889, 123);
-            this.txtLitrosSuper.Name = "txtLitrosSuper";
-            this.txtLitrosSuper.Size = new System.Drawing.Size(89, 20);
-            this.txtLitrosSuper.TabIndex = 35;
-            // 
-            // txtMontoPremium
-            // 
-            this.txtMontoPremium.Location = new System.Drawing.Point(984, 97);
-            this.txtMontoPremium.Name = "txtMontoPremium";
-            this.txtMontoPremium.Size = new System.Drawing.Size(89, 20);
-            this.txtMontoPremium.TabIndex = 34;
-            // 
-            // txtLitrosPremium
-            // 
-            this.txtLitrosPremium.Location = new System.Drawing.Point(889, 97);
-            this.txtLitrosPremium.Name = "txtLitrosPremium";
-            this.txtLitrosPremium.Size = new System.Drawing.Size(89, 20);
-            this.txtLitrosPremium.TabIndex = 33;
+            this.totalDeVentasToolStripMenuItem.Click += new System.EventHandler(this.totalDeVentasToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(847, 250);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 34);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(369, 150);
             this.dataGridView1.TabIndex = 47;
+            // 
+            // cerrarVentasToolStripMenuItem
+            // 
+            this.cerrarVentasToolStripMenuItem.Name = "cerrarVentasToolStripMenuItem";
+            this.cerrarVentasToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.cerrarVentasToolStripMenuItem.Text = "Cerrar Ventas";
+            this.cerrarVentasToolStripMenuItem.Click += new System.EventHandler(this.cerrarVentasToolStripMenuItem_Click);
+            // 
+            // cargarTotalVentasToolStripMenuItem
+            // 
+            this.cargarTotalVentasToolStripMenuItem.Name = "cargarTotalVentasToolStripMenuItem";
+            this.cargarTotalVentasToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.cargarTotalVentasToolStripMenuItem.Text = "Cargar Total Ventas";
+            this.cargarTotalVentasToolStripMenuItem.Click += new System.EventHandler(this.cargarTotalVentasToolStripMenuItem_Click);
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 421);
+            this.ClientSize = new System.Drawing.Size(590, 421);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtMontoTotal);
-            this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtMontoDiesel);
-            this.Controls.Add(this.txtLitrosDiesel);
-            this.Controls.Add(this.txtMontoEuro);
-            this.Controls.Add(this.txtLitrosEuro);
-            this.Controls.Add(this.txtMontoSuper);
-            this.Controls.Add(this.txtLitrosSuper);
-            this.Controls.Add(this.txtMontoPremium);
-            this.Controls.Add(this.txtLitrosPremium);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.Box1);
             this.Controls.Add(this.txtCantidadLitros);
@@ -651,12 +480,10 @@
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
-            this.Controls.Add(this.ImgSurtAbierto);
             this.Controls.Add(this.ImgSurtCerrado);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Ventas";
             this.Text = "Ventas";
-            ((System.ComponentModel.ISupportInitialize)(this.ImgSurtAbierto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).EndInit();
             this.Box1.ResumeLayout(false);
             this.Box1.PerformLayout();
@@ -688,7 +515,6 @@
         private System.Windows.Forms.TextBox txtVisorVenta;
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.TextBox txtCantidadLitros;
-        private System.Windows.Forms.PictureBox ImgSurtAbierto;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.RadioButton btnPremium;
         private System.Windows.Forms.RadioButton btnSuper;
@@ -700,26 +526,10 @@
         private System.Windows.Forms.Label lblEuro;
         private System.Windows.Forms.Label lblPremium;
         private System.Windows.Forms.TextBox txtMonto;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem totalDeVentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ventaAnteriorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cerrarTurnoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarPrecioToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtMontoTotal;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMontoDiesel;
-        private System.Windows.Forms.TextBox txtLitrosDiesel;
-        private System.Windows.Forms.TextBox txtMontoEuro;
-        private System.Windows.Forms.TextBox txtLitrosEuro;
-        private System.Windows.Forms.TextBox txtMontoSuper;
-        private System.Windows.Forms.TextBox txtLitrosSuper;
-        private System.Windows.Forms.TextBox txtMontoPremium;
-        private System.Windows.Forms.TextBox txtLitrosPremium;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem cerrarVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cargarTotalVentasToolStripMenuItem;
     }
 }

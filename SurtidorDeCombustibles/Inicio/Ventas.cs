@@ -52,6 +52,7 @@ namespace Inicio
             tabladeventas.Rows.Add(btnEuro.Text);
             tabladeventas.Rows.Add(btnDiesel.Text);
             dataGridView1.DataSource = tabladeventas;
+            dataGridView1.Visible = false;
 
         }
 
@@ -129,6 +130,8 @@ namespace Inicio
             if (btnSuper.Checked)
 
             {
+                //if(LitrosVendidos[1]!)
+                        
                 txtProducto.Text = btnSuper.Text;
                 Liquido.Precio = PrecioSuper;
                 indice = 1;
@@ -202,10 +205,29 @@ namespace Inicio
             txtVisorVenta.Text = "";
         }
 
+        private void totalDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Visible == true)
+            {
+                dataGridView1.Visible = false;
+            }
+            else
+            {
+                dataGridView1.Visible = true;
+            }
+        }
 
+        private void cerrarVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabladeventas.WriteXml("@Turno");
+            dataGridView1.DataSource = tabladeventas;
+        }
 
-
-
+        private void cargarTotalVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabladeventas.ReadXml("@Turno");
+            //dataGridView1.DataSource = tabladeventas;
+        }
     }
 }
 

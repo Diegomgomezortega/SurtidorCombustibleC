@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnVentas = new System.Windows.Forms.Button();
-            this.btnConfiguraciones = new System.Windows.Forms.Button();
             this.ImgInicio = new System.Windows.Forms.PictureBox();
             this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImgInicio)).BeginInit();
@@ -53,26 +52,13 @@
             this.btnVentas.BackColor = System.Drawing.Color.Lavender;
             this.btnVentas.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnVentas.Location = new System.Drawing.Point(34, 311);
+            this.btnVentas.Location = new System.Drawing.Point(95, 311);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(189, 38);
             this.btnVentas.TabIndex = 2;
-            this.btnVentas.Text = "COMENZAR TURNO";
+            this.btnVentas.Text = "VENDER";
             this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
-            // 
-            // btnConfiguraciones
-            // 
-            this.btnConfiguraciones.BackColor = System.Drawing.Color.Lavender;
-            this.btnConfiguraciones.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguraciones.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnConfiguraciones.Location = new System.Drawing.Point(229, 311);
-            this.btnConfiguraciones.Name = "btnConfiguraciones";
-            this.btnConfiguraciones.Size = new System.Drawing.Size(187, 38);
-            this.btnConfiguraciones.TabIndex = 3;
-            this.btnConfiguraciones.Text = "CONFIGURACIONES";
-            this.btnConfiguraciones.UseVisualStyleBackColor = false;
-            this.btnConfiguraciones.Click += new System.EventHandler(this.btnConfiguraciones_Click);
             // 
             // ImgInicio
             // 
@@ -89,7 +75,7 @@
             this.btnCerrarAplicacion.BackColor = System.Drawing.Color.Lavender;
             this.btnCerrarAplicacion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarAplicacion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCerrarAplicacion.Location = new System.Drawing.Point(422, 311);
+            this.btnCerrarAplicacion.Location = new System.Drawing.Point(316, 311);
             this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
             this.btnCerrarAplicacion.Size = new System.Drawing.Size(107, 38);
             this.btnCerrarAplicacion.TabIndex = 4;
@@ -103,7 +89,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 361);
             this.Controls.Add(this.btnCerrarAplicacion);
-            this.Controls.Add(this.btnConfiguraciones);
             this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.ImgInicio);
@@ -121,7 +106,6 @@
         private System.Windows.Forms.PictureBox ImgInicio;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button btnConfiguraciones;
         private System.Windows.Forms.Button btnCerrarAplicacion;
     }
 }
