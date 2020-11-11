@@ -241,13 +241,13 @@ namespace Inicio
             }
         }
 
-        private void cerrarVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cerrarVentasToolStripMenuItem_Click(object sender, EventArgs e)//control que habilita guardar las ventas
         {
-            if (GuardarVentas == true)
+            if (GuardarVentas == true)//Si no hay ventas, no guarda
             {
                 MessageBox.Show("No hay ventas para guardar");
             }
-            if (GuardarVentas == false)
+            if (GuardarVentas == false)//Si hay ventas, guarda y vuelve al Formulario de Inicio
             {
 
                 tabladeventas.WriteXml("@Turno");
