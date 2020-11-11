@@ -40,8 +40,6 @@
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
-            this.btnMonto = new System.Windows.Forms.Button();
-            this.btnLitros = new System.Windows.Forms.Button();
             this.txtVisorVenta = new System.Windows.Forms.TextBox();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.txtCantidadLitros = new System.Windows.Forms.TextBox();
@@ -199,27 +197,6 @@
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.btn7_Click);
-            // 
-            // btnMonto
-            // 
-            this.btnMonto.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMonto.Location = new System.Drawing.Point(231, 236);
-            this.btnMonto.Name = "btnMonto";
-            this.btnMonto.Size = new System.Drawing.Size(46, 46);
-            this.btnMonto.TabIndex = 13;
-            this.btnMonto.Text = "$";
-            this.btnMonto.UseVisualStyleBackColor = false;
-            // 
-            // btnLitros
-            // 
-            this.btnLitros.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLitros.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLitros.Location = new System.Drawing.Point(335, 236);
-            this.btnLitros.Name = "btnLitros";
-            this.btnLitros.Size = new System.Drawing.Size(46, 46);
-            this.btnLitros.TabIndex = 14;
-            this.btnLitros.Text = "LITROS";
-            this.btnLitros.UseVisualStyleBackColor = false;
             // 
             // txtVisorVenta
             // 
@@ -466,8 +443,6 @@
             this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtVisorVenta);
-            this.Controls.Add(this.btnLitros);
-            this.Controls.Add(this.btnMonto);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btnOK);
@@ -510,8 +485,6 @@
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn7;
-        private System.Windows.Forms.Button btnMonto;
-        private System.Windows.Forms.Button btnLitros;
         private System.Windows.Forms.TextBox txtVisorVenta;
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.TextBox txtCantidadLitros;
