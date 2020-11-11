@@ -243,14 +243,24 @@ namespace Inicio
 
         private void cerrarVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tabladeventas.WriteXml("@Turno");
-            dataGridView1.DataSource = tabladeventas;
-            GuardarVentas = true;
-            MessageBox.Show("Se ha guardado el turno");
-            this.Hide();
-            frmInicio frm = new frmInicio();
+            if (GuardarVentas == true)
+            {
+                MessageBox.Show("No hay ventas para guardar");
+            }
+            if (GuardarVentas == false)
+            {
 
-            frm.Show();
+                tabladeventas.WriteXml("@Turno");
+                dataGridView1.DataSource = tabladeventas;
+                GuardarVentas = true;
+                MessageBox.Show("Se ha guardado el turno");
+                this.Hide();
+                frmInicio frm = new frmInicio();
+                frm.Show();
+            }
+             
+
+            
         }
 
         private void cargarTotalVentasToolStripMenuItem_Click(object sender, EventArgs e)
