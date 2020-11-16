@@ -18,7 +18,9 @@ namespace Inicio
     public partial class Ventas : Form
     {
         //Se crean la tabla de Ventas, el objeto liquido y se da valor a variables de uso comun
-        DataTable tabladeventas = new DataTable();
+        DataTable dtVentas = new DataTable();
+        DataTable dtUltimoTurno = new DataTable();
+        DataTable dtTotalVentasGeneral = new DataTable();
         Combustible Liquido = new Combustible();
         decimal PrecioSuper = 65.00m;
         decimal PrecioPremium = 75.00m;
@@ -48,19 +50,25 @@ namespace Inicio
             lblPremium.Text = System.Convert.ToString(PrecioPremium);
             btnPremium.Checked = true;
             //Se da formato inicial a la tabla Ventas
-            tabladeventas.TableName = "TOTAL DE VENTAS";
-            tabladeventas.Columns.Add("PRODUCTO", typeof(string));
-            tabladeventas.Columns.Add("LITROS", typeof(decimal));
-            tabladeventas.Columns.Add("TOTAL $", typeof(decimal));
-            tabladeventas.Rows.Add("Premium");
-            tabladeventas.Rows.Add("Super");
-            tabladeventas.Rows.Add("Euro");
-            tabladeventas.Rows.Add("Diesel");
-            tabladeventas.Rows.Add("TOTAL");
-            dgvVentaActual.DataSource = tabladeventas;
+            dtVentas.TableName = "TOTAL DE VENTAS";
+            dtVentas.Columns.Add("PRODUCTO", typeof(string));
+            dtVentas.Columns.Add("LITROS", typeof(decimal));
+            dtVentas.Columns.Add("TOTAL $", typeof(decimal));
+            dtVentas.Rows.Add("Premium");
+            dtVentas.Rows.Add("Super");
+            dtVentas.Rows.Add("Euro");
+            dtVentas.Rows.Add("Diesel");
+            dtVentas.Rows.Add("TOTAL");
+            dgvVentaActual.DataSource = dtVentas;
             dgvVentaActual.Visible = false;
             dgvVentaAnterior.Visible = false;
             dgvTotalVentas.Visible = false;
+            dtUltimoTurno.TableName = "TOTAL DE VENTAS";
+            dtUltimoTurno.Columns.Add("PRODUCTO", typeof(string));
+            dtUltimoTurno.Columns.Add("LITROS", typeof(decimal));
+            dtUltimoTurno.Columns.Add("TOTAL $", typeof(decimal));
+            dtUltimoTurno.ReadXml("@TurnoAnterior");
+            dgvVentaAnterior.DataSource = dtUltimoTurno;
 
         }//Formulario display de Ventas
 
@@ -196,7 +204,7 @@ namespace Inicio
                 MessageBox.Show("Por favor, ingrese el monto a cargar");
             }
             Total = Total + Monto;
-            tabladeventas.Rows[4]["TOTAL $"] = Total;
+            dtVentas.Rows[4]["TOTAL $"] = Total;
 
             GuardarVentas = false;
 
@@ -205,9 +213,9 @@ namespace Inicio
         private void CargaDatosTabla()//se carga en la tabla los datos de la venta
         {
 
-            tabladeventas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
+            dtVentas.Rows[indice]["LITROS"] = LitrosVendidos[indice];
             MontoVendido[indice] = MontoVendido[indice] + Monto;
-            tabladeventas.Rows[indice]["TOTAL $"] = MontoVendido[indice];
+            dtVentas.Rows[indice]["TOTAL $"] = MontoVendido[indice];
         }
 
         private decimal Venta()
@@ -250,7 +258,7 @@ namespace Inicio
             if (GuardarVentas == false)//Si hay ventas, guarda y vuelve al Formulario de Inicio
             {
 
-                tabladeventas.WriteXml("@TurnoAnterior");
+                dtVentas.WriteXml("@TurnoAnterior");
                 //dgvVentaActual.DataSource = tabladeventas;
 
                 GuardarVentas = true;
@@ -264,50 +272,70 @@ namespace Inicio
 
         private void cargarTotalVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tabladeventas.ReadXml("@Turno");
-            dgvVentaActual.DataSource = tabladeventas;
+            dtVentas.ReadXml("@Turno");
+            dgvVentaActual.DataSource = dtVentas;
             MessageBox.Show("Ya es visible el total de Ventas");
         }
 
         private void verUltimoTurnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //dtUltimoTurno.TableName = "TOTAL DE VENTAS";
+            //dtUltimoTurno.Columns.Add("PRODUCTO", typeof(string));
+            //dtUltimoTurno.Columns.Add("LITROS", typeof(decimal));
+            //dtUltimoTurno.Columns.Add("TOTAL $", typeof(decimal));
+            //dtUltimoTurno.ReadXml("@TurnoAnterior");
+            //dgvVentaAnterior.DataSource = dtUltimoTurno;
+            if (dgvVentaAnterior.Visible == true)
+            {
+                dgvVentaAnterior.Visible = false;
+            }
+            else
+            {
+                dgvVentaAnterior.Visible = true;
+            }
             if (!System.IO.File.Exists("@TurnoAnterior"))
             
             {
                 MessageBox.Show("No hay guardado algún turno");
 
             }
-            else
-            {
-                DataTable dtUltimoTurno = new DataTable();
-                dtUltimoTurno.TableName = "TOTAL DE VENTAS";
-                dtUltimoTurno.Columns.Add("PRODUCTO", typeof(string));
-                dtUltimoTurno.Columns.Add("LITROS", typeof(decimal));
-                dtUltimoTurno.Columns.Add("TOTAL $", typeof(decimal));
+            //if(System.IO.File.Exists("@TurnoAnterior"))
+            //{
+            //    //DataTable dtUltimoTurno = new DataTable();
+            //    dtUltimoTurno.TableName = "TOTAL DE VENTAS";
+            //    dtUltimoTurno.Columns.Add("PRODUCTO", typeof(string));
+            //    dtUltimoTurno.Columns.Add("LITROS", typeof(decimal));
+            //    dtUltimoTurno.Columns.Add("TOTAL $", typeof(decimal));
 
 
-                dtUltimoTurno.ReadXml("@TurnoAnterior");
-                dgvVentaAnterior.DataSource = dtUltimoTurno;
-                if (dgvVentaAnterior.Visible == true)
-                {
-                    dgvVentaAnterior.Visible = false;
-                }
-                else
-                {
-                    dgvVentaAnterior.Visible = true;
-                }
-            }
+            //    dtUltimoTurno.ReadXml("@TurnoAnterior");
+            //    dgvVentaAnterior.DataSource = dtUltimoTurno;
+               
+            //}
             
 
         }
 
         private void TotalDeVentasGeneralToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataTable dtTotalVentasGeneral = new DataTable();
-            dtTotalVentasGeneral.TableName = "TOTAL DE VENTAS";
-            dtTotalVentasGeneral.Columns.Add("PRODUCTO", typeof(string));
-            dtTotalVentasGeneral.Columns.Add("LITROS", typeof(decimal));
-            dtTotalVentasGeneral.Columns.Add("TOTAL $", typeof(decimal));
+            if (System.IO.File.Exists("@TurnoAnterior"))
+
+            {
+                dgvVentaAnterior.DataSource = dtUltimoTurno;
+                //DataTable dtTotalVentasGeneral = new DataTable();
+                dtTotalVentasGeneral.TableName = "TOTAL DE VENTAS";
+                dtTotalVentasGeneral.Columns.Add("PRODUCTO", typeof(string));
+                dtTotalVentasGeneral.Columns.Add("LITROS", typeof(decimal));
+                dtTotalVentasGeneral.Columns.Add("TOTAL $", typeof(decimal));
+                dtTotalVentasGeneral.Rows.Add("Premium");
+                dtTotalVentasGeneral.Rows.Add("Super");
+                dtTotalVentasGeneral.Rows.Add("Euro");
+                dtTotalVentasGeneral.Rows.Add("Diesel");
+                dtTotalVentasGeneral.Rows.Add("TOTAL");
+                dtTotalVentasGeneral.Rows[indice]["LITROS"] = System.Convert.ToDecimal(dtVentas.Rows[indice]["LITROS"]) + System.Convert.ToDecimal(dtUltimoTurno.Rows[indice]["LITROS"]);
+                dtTotalVentasGeneral.Rows[indice]["TOTAL"] = System.Convert.ToDecimal(dtVentas.Rows[indice]["TOTAL"]) + System.Convert.ToDecimal(dtUltimoTurno.Rows[indice]["TOTAL"]);
+            }
+            
             //dgvVentaAnterior.
             //indice = 0;
             //for (indice = 0, indice = 3, ++)
