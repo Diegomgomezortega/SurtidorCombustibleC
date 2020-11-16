@@ -18,9 +18,7 @@ namespace Productos
         public decimal res = new decimal();
         public decimal MontodeVenta = new decimal();
         public decimal TotaldeVenta = new decimal();
-
-        
-        
+                
         public decimal LitrosVenta(decimal res)//Metodo para calcular los litros vendidos, devuelve Res
         {
             res= MontodeVenta / Precio;
@@ -29,11 +27,10 @@ namespace Productos
             return res;
         }
         
-
-        
+               
     }
-
     
+
 
 }
     
