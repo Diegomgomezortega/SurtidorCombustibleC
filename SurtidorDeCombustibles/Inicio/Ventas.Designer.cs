@@ -58,12 +58,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.totalDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GuardarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verUltimoTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.VentasTurnoAnteriorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TotalDeVentasGeneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvVentaActual = new System.Windows.Forms.DataGridView();
+            this.dgvTotalVentas = new System.Windows.Forms.DataGridView();
+            this.dgvVentaAnterior = new System.Windows.Forms.DataGridView();
+            this.vaciarHistorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSurtCerrado)).BeginInit();
             this.Box1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentaActual)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTotalVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentaAnterior)).BeginInit();
             this.SuspendLayout();
             // 
             // btn1
@@ -395,18 +401,20 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.totalDeVentasToolStripMenuItem,
             this.GuardarVentasToolStripMenuItem,
-            this.verUltimoTurnoToolStripMenuItem});
+            this.VentasTurnoAnteriorToolStripMenuItem,
+            this.TotalDeVentasGeneralToolStripMenuItem,
+            this.vaciarHistorialToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(590, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(716, 24);
             this.menuStrip1.TabIndex = 32;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // totalDeVentasToolStripMenuItem
             // 
             this.totalDeVentasToolStripMenuItem.Name = "totalDeVentasToolStripMenuItem";
-            this.totalDeVentasToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
-            this.totalDeVentasToolStripMenuItem.Text = "Total de Ventas";
+            this.totalDeVentasToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.totalDeVentasToolStripMenuItem.Text = "Ventas Actual";
             this.totalDeVentasToolStripMenuItem.Click += new System.EventHandler(this.totalDeVentasToolStripMenuItem_Click);
             // 
             // GuardarVentasToolStripMenuItem
@@ -416,27 +424,58 @@
             this.GuardarVentasToolStripMenuItem.Text = "Guardar Ventas";
             this.GuardarVentasToolStripMenuItem.Click += new System.EventHandler(this.cerrarVentasToolStripMenuItem_Click);
             // 
-            // verUltimoTurnoToolStripMenuItem
+            // VentasTurnoAnteriorToolStripMenuItem
             // 
-            this.verUltimoTurnoToolStripMenuItem.Name = "verUltimoTurnoToolStripMenuItem";
-            this.verUltimoTurnoToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.verUltimoTurnoToolStripMenuItem.Text = "Ver Turno Anterior";
-            this.verUltimoTurnoToolStripMenuItem.Click += new System.EventHandler(this.verUltimoTurnoToolStripMenuItem_Click);
+            this.VentasTurnoAnteriorToolStripMenuItem.Name = "VentasTurnoAnteriorToolStripMenuItem";
+            this.VentasTurnoAnteriorToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
+            this.VentasTurnoAnteriorToolStripMenuItem.Text = "Ventas Turno Anterior";
+            this.VentasTurnoAnteriorToolStripMenuItem.Click += new System.EventHandler(this.verUltimoTurnoToolStripMenuItem_Click);
             // 
-            // dataGridView1
+            // TotalDeVentasGeneralToolStripMenuItem
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(369, 168);
-            this.dataGridView1.TabIndex = 47;
+            this.TotalDeVentasGeneralToolStripMenuItem.Name = "TotalDeVentasGeneralToolStripMenuItem";
+            this.TotalDeVentasGeneralToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
+            this.TotalDeVentasGeneralToolStripMenuItem.Text = "Total de Ventas General";
+            this.TotalDeVentasGeneralToolStripMenuItem.Click += new System.EventHandler(this.TotalDeVentasGeneralToolStripMenuItem_Click);
+            // 
+            // dgvVentaActual
+            // 
+            this.dgvVentaActual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVentaActual.Location = new System.Drawing.Point(1, 34);
+            this.dgvVentaActual.Name = "dgvVentaActual";
+            this.dgvVentaActual.Size = new System.Drawing.Size(369, 168);
+            this.dgvVentaActual.TabIndex = 47;
+            // 
+            // dgvTotalVentas
+            // 
+            this.dgvTotalVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTotalVentas.Location = new System.Drawing.Point(0, 34);
+            this.dgvTotalVentas.Name = "dgvTotalVentas";
+            this.dgvTotalVentas.Size = new System.Drawing.Size(369, 168);
+            this.dgvTotalVentas.TabIndex = 48;
+            // 
+            // dgvVentaAnterior
+            // 
+            this.dgvVentaAnterior.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVentaAnterior.Location = new System.Drawing.Point(1, 34);
+            this.dgvVentaAnterior.Name = "dgvVentaAnterior";
+            this.dgvVentaAnterior.Size = new System.Drawing.Size(369, 168);
+            this.dgvVentaAnterior.TabIndex = 49;
+            // 
+            // vaciarHistorialToolStripMenuItem
+            // 
+            this.vaciarHistorialToolStripMenuItem.Name = "vaciarHistorialToolStripMenuItem";
+            this.vaciarHistorialToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.vaciarHistorialToolStripMenuItem.Text = "Vaciar Historial";
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 421);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(716, 421);
+            this.Controls.Add(this.dgvVentaAnterior);
+            this.Controls.Add(this.dgvTotalVentas);
+            this.Controls.Add(this.dgvVentaActual);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.Box1);
             this.Controls.Add(this.txtCantidadLitros);
@@ -464,7 +503,9 @@
             this.Box1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentaActual)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTotalVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentaAnterior)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,8 +542,12 @@
         private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem totalDeVentasToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvVentaActual;
         private System.Windows.Forms.ToolStripMenuItem GuardarVentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verUltimoTurnoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem VentasTurnoAnteriorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TotalDeVentasGeneralToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dgvTotalVentas;
+        private System.Windows.Forms.DataGridView dgvVentaAnterior;
+        private System.Windows.Forms.ToolStripMenuItem vaciarHistorialToolStripMenuItem;
     }
 }

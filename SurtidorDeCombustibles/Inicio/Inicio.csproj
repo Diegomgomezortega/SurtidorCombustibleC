@@ -60,12 +60,6 @@
     <Compile Include="Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
-    <Compile Include="VentaTurnoAnterior.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VentaTurnoAnterior.Designer.cs">
-      <DependentUpon>VentaTurnoAnterior.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,9 +75,6 @@
     </Compile>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VentaTurnoAnterior.resx">
-      <DependentUpon>VentaTurnoAnterior.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Ventas.datasource" />
     <None Include="Properties\Settings.settings">
