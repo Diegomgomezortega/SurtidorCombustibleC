@@ -57,8 +57,11 @@ namespace Inicio
             dgvVentaActual.Visible = false;
 
             
-
             
+
+
+
+
             dtVentaAnterior.TableName = "TOTAL DE VENTAS";
             dtVentaAnterior.Columns.Add("PRODUCTO", typeof(string));
             dtVentaAnterior.Columns.Add("LITROS", typeof(decimal));
@@ -285,12 +288,7 @@ namespace Inicio
 
         }
 
-        private void cargarTotalVentasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dtVentas.ReadXml("@Turno");
-            dgvVentaActual.DataSource = dtVentas;
-            MessageBox.Show("Ya es visible el total de Ventas");
-        }
+        
 
         private void verUltimoTurnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -415,6 +413,8 @@ namespace Inicio
             return LitrosVendidos[indice];
 
         }
+
+        
     }
 }
 

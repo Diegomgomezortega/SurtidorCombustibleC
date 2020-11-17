@@ -46,11 +46,6 @@ namespace Inicio
 
         }
 
-        private void btnConfiguraciones_Click(object sender, EventArgs e)
-        {
-            //this.Hide();
-            //Historial fmr = new Historial();
-            //fmr.Show();
-        }
+        
     }
 }
