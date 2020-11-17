@@ -17,7 +17,7 @@ namespace Inicio
 
     public partial class Ventas : Form
     {
-        //Se crean la tabla de Ventas, el objeto liquido y se da valor a variables de uso comun
+        //Se crean la tabla de Ventas,  tabla de Venta anterior, el objeto liquido y se da valor a variables de uso comun
         DataTable dtVentas = new DataTable();
         DataTable dtVentaAnterior = new DataTable();
         Combustible Liquido = new Combustible();
@@ -55,17 +55,12 @@ namespace Inicio
             dtVentas.Rows.Add("TOTAL");
             dgvVentaActual.DataSource = dtVentas;
             dgvVentaActual.Visible = false;
-
-            
-            
-
-
-
-
+            //Se da formato a la tabla Venta anterior
             dtVentaAnterior.TableName = "TOTAL DE VENTAS";
             dtVentaAnterior.Columns.Add("PRODUCTO", typeof(string));
             dtVentaAnterior.Columns.Add("LITROS", typeof(decimal));
             dtVentaAnterior.Columns.Add("TOTAL $", typeof(decimal));
+            //Si tenemos un archivo de turno anterior, lo lee. Si no, sigue creando las filas de la dtVentaAnterior
             if (!System.IO.File.Exists("@TurnoAnterior"))
             {
                 dtVentaAnterior.Rows.Add("Premium");
@@ -191,13 +186,10 @@ namespace Inicio
                 if (btnSuper.Checked)
 
                 {
-
-
                     txtProducto.Text = btnSuper.Text;
                     Liquido.Precio = PrecioSuper;
                     indice = 1;
                     Monto = System.Convert.ToDecimal(txtVisorVenta.Text);
-
                     Venta();//este metodo se encuentra en este formulario
                     CargaDatosTabla();//este metodo se encuenta en este formulario
 
@@ -227,7 +219,6 @@ namespace Inicio
                     Liquido.Precio = PrecioEuro;
                     indice = 2;
                     Monto = System.Convert.ToDecimal(txtVisorVenta.Text);
-
                     Venta();//este metodo se encuentra en este formulario
                     CargaDatosTabla();//este metodo se encuenta en este formulario
                 }
@@ -241,9 +232,6 @@ namespace Inicio
             dtVentas.Rows[4]["TOTAL $"] = Total;
 
             GuardarVentas = false;
-            
-
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -251,7 +239,7 @@ namespace Inicio
             txtVisorVenta.Text = "";
         }//Borra el contenido del Visor de ventas
 
-        private void totalDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void totalDeVentasToolStripMenuItem_Click(object sender, EventArgs e) //Muestra las ventas actuales
         {
             if (dgvVentaActual.Visible == true)
             {
@@ -260,8 +248,6 @@ namespace Inicio
             else
             {
                 dgvVentaActual.Visible = true;
-                //dgvTotalVentas.Visible = false;
-
                 dgvVentaAnterior.Visible = false;
             }
         }
@@ -290,10 +276,8 @@ namespace Inicio
 
         
 
-        private void verUltimoTurnoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void verUltimoTurnoToolStripMenuItem_Click(object sender, EventArgs e)//Muestra el turno anterior
         {
-            
-            
             if (!System.IO.File.Exists("@TurnoAnterior"))
             
             {
@@ -315,8 +299,6 @@ namespace Inicio
                 }
             }
             
-            
-
         }
 
         private void TotalDeVentasGeneralToolStripMenuItem_Click(object sender, EventArgs e)
@@ -400,7 +382,7 @@ namespace Inicio
             //dtTotalVentasGeneral.Rows[indice]["LITROS"] = System.Convert.ToDecimal(dtTotalVentasGeneral.Rows[indice]["LITROS"]) + LitrosVendidos[indice];
         }
 
-        private decimal Venta()
+        private decimal Venta()//Se calcula y se colocan los datos en la imagen del surtidor
         {
 
             Liquido.MontodeVenta = System.Convert.ToDecimal(txtVisorVenta.Text);

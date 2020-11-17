@@ -454,7 +454,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 421);
+            this.ClientSize = new System.Drawing.Size(716, 441);
             this.Controls.Add(this.dgvVentaAnterior);
             this.Controls.Add(this.dgvVentaActual);
             this.Controls.Add(this.txtMonto);
